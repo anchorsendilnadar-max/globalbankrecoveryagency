@@ -8,15 +8,36 @@ body{
 font-family:Arial,sans-serif;
 margin:0;
 background:#f4f4f4;
+
 }
 .header{
-background:#002b5c;
-color:white;
-text-align:center;
-padding:30px;
+    background:#002b5c;
+    color:white;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    position:sticky;
+    top:0;
+    z-index:9999;
 }
 
-</div>
+.logo{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+}
+
+.header-text h1{
+    margin:0;
+    font-size:22px;
+}
+
+.header-text p{
+    margin:5px 0 0 0;
+    font-size:13px;
+}
+
 .section{
 padding:20px;
 }
@@ -59,12 +80,16 @@ padding:15px;
 
 <body>
 
-<div class="header">
-  
-  <img src="IMG-20260822-WA0005.jpg" alt="GBRA Logo" width="150">
+  <div class="header">
+
+<img src="IMG-20260822-WA0005.jpg" class="logo">
+
+<div class="header-text">
 <h1>GLOBAL BANK RECOVERY AGENCY</h1>
-<p>Trust | Recovery | Results</p>
+<p>Service Area - Mumbai, Thane, Palghar, Navi Mumbai, Panvel, Kalyan-Dombivli</p>
 </div>
+
+  </div>
 
 <div class="section">
 
