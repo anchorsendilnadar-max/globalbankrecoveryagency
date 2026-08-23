@@ -18,10 +18,12 @@ gap:30px;
 padding:20px;
 background:#002b5c;
 }
-    
+ .header-main{
+flex-wrap:wrap;
+ }   
 .logo{
-    width:350px;
-    height:350px;
+    width:180px;
+    height:180px;
     border-radius:50%;
     border:3px solid gold;
 }
@@ -104,9 +106,26 @@ padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
+ font-size:16px;
+min-width:120px;
+text-align:center;
 z-index:9999;
 }
- 
+ form input,
+form textarea{
+width:100%;
+padding:12px;
+margin:8px 0;
+box-sizing:border-box;
+}
+
+form button{
+background:#002b5c;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:5px;
+}
  .header-top{
 background:#002b5c;
 color:white;
@@ -138,7 +157,31 @@ font-weight:bold;
 margin-top:15px;
 line-height:1.4;
 }
- 
+
+@media(max-width:768px){
+
+.header-main{
+flex-direction:column;
+text-align:center;
+}
+
+.logo{
+width:140px;
+height:140px;
+}
+
+.header-text h1{
+font-size:36px;
+}
+
+.header-text p{
+font-size:18px;
+}
+
+}
+
+Line 144
+</style>
 </style>
 </head>
 
@@ -150,8 +193,6 @@ line-height:1.4;
  <p style="color:gold;font-size:34px;font-weight:bold;">
  Professional Recovery & Collection Services Since 2020
 </p>
-
- <div class="header-text">
 
 <div class="header-text">
 <h1>GLOBAL BANK<br>RECOVERY AGENCY</h1>
