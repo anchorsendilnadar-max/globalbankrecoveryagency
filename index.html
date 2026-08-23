@@ -13,9 +13,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="icon" type="image/jpeg" href="IMG-20260822-WA0005.jpg">
-
+    
 <style>
+    
+/* ================= LANGUAGE SELECTOR ================= */
 
+.language-selector {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10000;
+}
+
+.language-selector select {
+    background: white;
+    color: #002b5c;
+    border: 2px solid gold;
+    border-radius: 20px;
+    padding: 7px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .language-selector {
+        top: 5px;
+        right: 5px;
+    }
+
+    .language-selector select {
+        padding: 4px 7px;
+        font-size: 9px;
+    }
+}
+    
 *{
 box-sizing:border-box;
 }
@@ -932,6 +964,64 @@ class="floating-email">
 Email
 </a>
 
+<script>
+function changeLanguage(lang) {
+    const translations = {
+        en: {
+            services: "Our Services",
+            location: "Our Location",
+            contact: "CONTACT US",
+            address: "Office Address"
+        },
+        hi: {
+            services: "हमारी सेवाएं",
+            location: "हमारा स्थान",
+            contact: "संपर्क करें",
+            address: "कार्यालय का पता"
+        },
+        ta: {
+            services: "எங்கள் சேவைகள்",
+            location: "எங்கள் இடம்",
+            contact: "தொடர்பு கொள்ளுங்கள்",
+            address: "அலுவலக முகவரி"
+        },
+        mr: {
+            services: "आमच्या सेवा",
+            location: "आमचे स्थान",
+            contact: "संपर्क करा",
+            address: "कार्यालयाचा पत्ता"
+        },
+        gu: {
+            services: "અમારી સેવાઓ",
+            location: "અમારું સ્થાન",
+            contact: "અમારો સંપર્ક કરો",
+            address: "ઓફિસનું સરનામું"
+        }
+    };
 
+    const t = translations[lang];
+
+    if (!t) return;
+
+    document.querySelectorAll("h2").forEach(function(el) {
+        if (el.innerText === "Our Services") {
+            el.innerText = t.services;
+        }
+
+        if (el.innerText === "Our Location") {
+            el.innerText = t.location;
+        }
+
+        if (el.innerText === "CONTACT US") {
+            el.innerText = t.contact;
+        }
+
+        if (el.innerText === "Office Address") {
+            el.innerText = t.address;
+        }
+    });
+}
+</script>
+    
 </body>
 </html>
