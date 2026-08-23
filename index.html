@@ -31,77 +31,151 @@ background:#f4f4f4;
 color:#222;
 }
 
+
 /* ================= HEADER ================= */
 
-.header-main{
-background:#002b5c;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:35px;
-padding:25px 20px;
-border-bottom:4px solid gold;
+.header-main {
+    background: #002b5c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px 40px;
+    border-bottom: 4px solid gold;
+    box-sizing: border-box;
 }
 
-.logo-section{
-display:flex;
-flex-direction:column;
-align-items:center;
-text-align:center;
-flex-shrink:0;
+/* LEFT - LOGO + PROFESSIONAL RECOVERY SERVICES */
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
 }
 
-.logo{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:3px solid gold;
+.logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid gold;
 }
 
-.company-subtitle{
-color:gold;
-font-size:18px;
-font-weight:bold;
-margin:15px 0 0;
-line-height:1.4;
+.company-subtitle {
+    color: gold;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 0 0;
+    line-height: 1.3;
 }
 
-.header-text{
-max-width:900px;
+/* RIGHT - COMPANY NAME + TAGLINE */
+.header-text {
+    flex: 1;
+    max-width: 900px;
+    text-align: center;
 }
 
-.header-text h1{
-margin:0;
-font-size:64px;
-font-weight:900;
-line-height:1.1;
-text-align:left;
+.header-text h1 {
+    margin: 0;
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: center;
 }
 
-.header-text hr{
-border:0;
-border-top:2px solid gold;
-margin:15px 0;
+.header-text hr {
+    border: 0;
+    border-top: 2px solid gold;
+    margin: 15px auto;
+    width: 85%;
 }
 
-.header-text p{
-margin:0;
-font-size:28px;
-color:gold;
-font-weight:900;
+.header-text p {
+    margin: 0;
+    font-size: 26px;
+    color: gold;
+    font-weight: 900;
 }
 
-.service-area{
-color:#f5c542;
-font-size:32px;
-font-weight:bold;
-line-height:1.5;
-text-align:left;
-margin-top:15px !important;
+.service-area {
+    color: #ffc107;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 15px;
 }
 
+
+/* ================= MOBILE HEADER ================= */
+
+@media (max-width: 768px) {
+
+    .header-main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 15px 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .logo-section {
+        width: 34%;
+        min-width: 105px;
+        flex-shrink: 0;
+    }
+
+    .logo {
+        width: 105px;
+        height: 105px;
+        border-width: 2px;
+    }
+
+    .company-subtitle {
+        font-size: 11px;
+        line-height: 1.25;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .header-text {
+        width: 66%;
+        max-width: none;
+        flex: 1;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 25px;
+        line-height: 1.12;
+        text-align: center;
+    }
+
+    .header-text hr {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .header-text p {
+        font-size: 15px;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .service-area {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
 /* ================= MAIN ================= */
 
 .section{
