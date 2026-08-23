@@ -78,28 +78,91 @@ font-weight:bold;
 margin:5px;
 }
  
-.footer{
+.professional-footer{
 background:#002b5c;
 color:white;
 text-align:center;
-padding:15px;
+padding:35px 15px;
+margin-top:30px;
+font-size:16px;
+line-height:1.7;
+}
+
+.professional-footer h3{
+margin:0 0 8px;
+font-size:24px;
+}
+
+.footer-tagline{
+color:#ffd700;
+font-weight:bold;
+margin:8px 0 20px;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin:20px 0;
+}
+
+.footer-links a{
+background:white;
+color:#002b5c;
+padding:10px 18px;
+border-radius:25px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.footer-area{
+margin:20px auto;
+max-width:600px;
+}
+
+.copyright{
+margin:15px 0 0;
+font-size:14px;
+opacity:0.9;
+}
+
+@media (max-width:768px){
+
+.professional-footer{
+padding:30px 12px;
+font-size:15px;
+}
+
+.professional-footer h3{
+font-size:21px;
+}
+
+.footer-links{
+gap:8px;
+}
+
+.footer-links a{
+padding:9px 14px;
+}
+
 }
  
-  .floating-whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    z-index:9999;
+.floating-whatsapp{
+ position:fixed;
+ bottom:20px;
+ right:20px;
+ background:#25D366;
+ color:white;
+ padding:15px 20px;
+ border-radius:50px;
+ text-decoration:none;
+ font-weight:bold;
+ box-shadow:0 4px 10px rgba(0,0,0,0.3);
+ z-index:9999;
   }
- 
-    .floating-call{
+
+.floating-call{
 position:fixed;
 bottom:100px;
 right:20px;
@@ -492,26 +555,30 @@ loading="lazy">
 
  </div>
 
-<footer>
-<p>
-© 2026 Global Bank Recovery Agency
-</p>
+<footer class="professional-footer">
 
-<p>
-Trust • Recovery • Results
-</p>
+  <h3>Global Bank Recovery Agency</h3>
 
-<p>
-Mumbai | Thane | Palghar | Navi Mumbai | Panvel
-</p>
+  <p>Professional Recovery & Collection Services</p>
 
-<p>
-📞 8451817707
-</p>
+  <p class="footer-tagline">
+    TRUST • RECOVERY • RESULTS
+  </p>
 
-<p>
-📧 globalbankrecoveryagency26@gmail.com
-</p>
+  <div class="footer-links">
+    <a href="tel:8451817707">Call Us</a>
+    <a href="mailto:globalbankrecoveryagency26@gmail.com">Email Us</a>
+    <a href="https://wa.me/918451817707">WhatsApp</a>
+  </div>
+
+  <p class="footer-area">
+    Mumbai • Thane • Palghar • Navi Mumbai • Panvel • Kalyan-Dombivli
+  </p>
+
+  <p class="copyright">
+    © 2026 Global Bank Recovery Agency. All Rights Reserved.
+  </p>
+
 </footer>
  
     <a href="https://wa.me/918451817707" class="floating-whatsapp">WhatsApp</a>
