@@ -14,6 +14,9 @@
 
 <link rel="icon" type="image/jpeg" href="IMG-20260822-WA0005.jpg">
     
+    <!-- LANGUAGE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Noto+Sans+Gujarati:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap"
+    
 <style>
     
 /* ================= LANGUAGE SELECTOR ================= */
@@ -62,7 +65,32 @@ margin:0;
 background:#f4f4f4;
 color:#222;
 }
+/* ================= LANGUAGE FONTS ================= */
 
+body[data-lang="en"],
+body[data-lang="en"] * {
+    font-family: Arial, sans-serif;
+}
+
+body[data-lang="hi"],
+body[data-lang="hi"] * {
+    font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+body[data-lang="mr"],
+body[data-lang="mr"] * {
+    font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+body[data-lang="ta"],
+body[data-lang="ta"] * {
+    font-family: "Noto Sans Tamil", sans-serif;
+}
+
+body[data-lang="gu"],
+body[data-lang="gu"] * {
+    font-family: "Noto Sans Gujarati", sans-serif;
+}
 
 /* ================= HEADER ================= */
 
@@ -966,31 +994,39 @@ Email
 
 <script>
 function changeLanguage(lang) {
+
+    document.body.setAttribute("data-lang", lang);
+
     const translations = {
+
         en: {
             services: "Our Services",
             location: "Our Location",
             contact: "CONTACT US",
             address: "Office Address"
         },
+
         hi: {
             services: "हमारी सेवाएं",
             location: "हमारा स्थान",
             contact: "संपर्क करें",
             address: "कार्यालय का पता"
         },
+
         ta: {
             services: "எங்கள் சேவைகள்",
             location: "எங்கள் இடம்",
             contact: "தொடர்பு கொள்ளுங்கள்",
             address: "அலுவலக முகவரி"
         },
+
         mr: {
             services: "आमच्या सेवा",
             location: "आमचे स्थान",
             contact: "संपर्क करा",
             address: "कार्यालयाचा पत्ता"
         },
+
         gu: {
             services: "અમારી સેવાઓ",
             location: "અમારું સ્થાન",
@@ -1003,24 +1039,69 @@ function changeLanguage(lang) {
 
     if (!t) return;
 
-    document.querySelectorAll("h2").forEach(function(el) {
-        if (el.innerText === "Our Services") {
-            el.innerText = t.services;
-        }
+    const serviceTitle =
+        document.querySelector(".card h2");
 
-        if (el.innerText === "Our Location") {
+    if (serviceTitle) {
+        serviceTitle.innerText = t.services;
+    }
+
+    document.querySelectorAll("h2").forEach(function(el) {
+
+        const oldText = el.innerText.trim();
+
+        if (
+            oldText === "Our Location" ||
+            oldText === "हमारा स्थान" ||
+            oldText === "எங்கள் இடம்" ||
+            oldText === "आमचे स्थान" ||
+            oldText === "અમારું સ્થાન"
+        ) {
             el.innerText = t.location;
         }
 
-        if (el.innerText === "CONTACT US") {
+        if (
+            oldText === "CONTACT US" ||
+            oldText === "संपर्क करें" ||
+            oldText === "தொடர்பு கொள்ளுங்கள்" ||
+            oldText === "संपर्क करा" ||
+            oldText === "અમારો સંપર્ક કરો"
+        ) {
             el.innerText = t.contact;
         }
 
-        if (el.innerText === "Office Address") {
+        if (
+            oldText === "Office Address" ||
+            oldText === "कार्यालय का पता" ||
+            oldText === "அலுவலக முகவரி" ||
+            oldText === "कार्यालयाचा पत्ता" ||
+            oldText === "ઓફિસનું સરનામું"
+        ) {
             el.innerText = t.address;
         }
     });
+
+    localStorage.setItem("selectedLanguage", lang);
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const savedLanguage =
+        localStorage.getItem("selectedLanguage") || "en";
+
+    document.body.setAttribute(
+        "data-lang",
+        savedLanguage
+    );
+
+    const selector =
+        document.getElementById("languageSelect");
+
+    if (selector) {
+        selector.value = savedLanguage;
+    }
+});
 </script>
     
 </body>
