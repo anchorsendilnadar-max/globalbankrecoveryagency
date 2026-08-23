@@ -252,7 +252,33 @@ font-size:16px;
 line-height:1.8;
  }
  
-@media(max-width:768px){
+@media (max-width:768px){
+
+.email-btn{
+right:5px;
+top:55%;
+transform:scale(0.75);
+}
+
+.call-btn{
+right:5px;
+top:70%;
+transform:scale(0.75);
+}
+
+.whatsapp-btn{
+right:5px;
+top:85%;
+transform:scale(0.75);
+}
+ 
+}.contact-buttons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+ 
  .card{
 width:90%;
 margin:20px auto;
@@ -377,16 +403,13 @@ loading="lazy">
 <p>Mobile: 8451817707</p>
 <p>Email: globalbankrecoveryagency26@gmail.com</p>
 
-<a class="btn" href="https://wa.me/918451817707">
-WhatsApp Us
-</a>
+<div class="contact-buttons">
 
-<a class="btn" href="tel:+918451817707">
-Call Us
-</a>
+<a href="...">WhatsApp Us</a>
+<a href="...">Call Us</a>
+<a href="...">Email Us</a>
 
-<a class="btn" href="mailto:globalbankrecoveryagency26@gmail.com">
-Email Us
+</div>
     
 </a>
 
