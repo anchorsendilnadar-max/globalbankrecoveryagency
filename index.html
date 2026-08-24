@@ -90,9 +90,7 @@ button,select,input,textarea{font:inherit}
 .site-header{
   background:var(--navy);
   color:#fff;
-  position:sticky;
-  top:0;
-  z-index:9999;
+  position:relative;
   padding:18px 0 22px;
   border-bottom:4px solid var(--gold);
 }
@@ -266,32 +264,23 @@ button,select,input,textarea{font:inherit}
 }
 
 .hero-card{
-  background:#fff;
-  color:var(--navy);
-  border-radius:18px;
-  padding:25px;
-  box-shadow:0 18px 45px rgba(0,0,0,.25);
+  background:transparent;
+  color:#fff;
+  border-radius:0;
+  padding:0;
+  box-shadow:none;
   text-align:center;
 }
 
 .hero-card img{
-  width:min(280px,85%);
-  aspect-ratio:1/1;
-  margin:0 auto 10px;
-  border-radius:50%;
-  object-fit:cover;
-  display:block;
+  width:min(360px,92%);
+  margin:0 auto;
 }
 
-.hero-card h3{
-  font-size:25px;
-  color:var(--navy);
-}
-
+/* Logo only: remove the card background and extra text */
+.hero-card h3,
 .hero-card p{
-  color:var(--muted);
-  font-size:15px;
-  margin-top:5px;
+  display:none;
 }
 
 /* =========================================================
@@ -608,9 +597,7 @@ footer{
   }
 
   .navbar{
-  position:sticky;
-  top:0;
-  z-index:9998;
+    position:relative;
   }
 
   .nav-inner{
@@ -649,7 +636,7 @@ footer{
   }
 
   .hero-card{
-    padding:18px;
+    padding:0;
   }
 
   section{
@@ -1302,3 +1289,39 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+     
