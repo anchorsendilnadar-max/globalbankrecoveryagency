@@ -90,7 +90,9 @@ button,select,input,textarea{font:inherit}
 .site-header{
   background:var(--navy);
   color:#fff;
-  position:relative;
+  position:sticky;
+  top:0;
+  z-index:9999;
   padding:18px 0 22px;
   border-bottom:4px solid var(--gold);
 }
@@ -274,7 +276,11 @@ button,select,input,textarea{font:inherit}
 
 .hero-card img{
   width:min(280px,85%);
+  aspect-ratio:1/1;
   margin:0 auto 10px;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
 }
 
 .hero-card h3{
@@ -602,7 +608,9 @@ footer{
   }
 
   .navbar{
-    position:relative;
+  position:sticky;
+  top:0;
+  z-index:9998;
   }
 
   .nav-inner{
