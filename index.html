@@ -967,7 +967,63 @@ footer{
 
   </div>
 </section>
+<!-- =========================================================
+     GBRA PAGE SLIDER
+========================================================= -->
+<section class="gbra-slider" aria-label="Global Bank Recovery Agency highlights">
+  <div class="gbra-slider-track">
 
+    <div class="gbra-slide">
+      <div class="gbra-slide-box">
+        <h2>Professional <span>Recovery Solutions</span></h2>
+        <p>Trusted recovery support for banks, financial institutions and businesses.</p>
+        <a href="#services" class="gbra-slide-btn">View Services</a>
+      </div>
+    </div>
+
+    <div class="gbra-slide">
+      <div class="gbra-slide-box">
+        <h2>Vehicle <span>Recovery</span></h2>
+        <p>Fast and efficient recovery support for two-wheelers, four-wheelers and commercial vehicles.</p>
+        <a href="#services" class="gbra-slide-btn">Our Services</a>
+      </div>
+    </div>
+
+    <div class="gbra-slide">
+      <div class="gbra-slide-box">
+        <h2>Property <span>Recovery</span></h2>
+        <p>Professional support for residential and commercial property recovery assignments.</p>
+        <a href="#services" class="gbra-slide-btn">Learn More</a>
+      </div>
+    </div>
+
+    <div class="gbra-slide">
+      <div class="gbra-slide-box">
+        <h2>Field <span>Investigation</span></h2>
+        <p>Detailed field verification, investigation and reporting with a professional approach.</p>
+        <a href="#services" class="gbra-slide-btn">View Services</a>
+      </div>
+    </div>
+
+    <div class="gbra-slide">
+      <div class="gbra-slide-box">
+        <h2>Pan India <span>Recovery Network</span></h2>
+        <p>Reliable recovery assistance with professional execution and clear reporting.</p>
+        <a href="#contact" class="gbra-slide-btn">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="gbra-slider-dots">
+    <button class="gbra-dot active" onclick="gbraGoToSlide(0)" aria-label="Slide 1"></button>
+    <button class="gbra-dot" onclick="gbraGoToSlide(1)" aria-label="Slide 2"></button>
+    <button class="gbra-dot" onclick="gbraGoToSlide(2)" aria-label="Slide 3"></button>
+    <button class="gbra-dot" onclick="gbraGoToSlide(3)" aria-label="Slide 4"></button>
+    <button class="gbra-dot" onclick="gbraGoToSlide(4)" aria-label="Slide 5"></button>
+  </div>
+</section>
+   
 <!-- =========================================================
      SERVICES
      ========================================================= -->
@@ -1394,7 +1450,58 @@ document.addEventListener("DOMContentLoaded",()=>{
   changeLanguage(saved);
 });
 </script>
+<script>
+(function () {
+  let gbraCurrentSlide = 0;
+  const gbraTotalSlides = 5;
+  let gbraTimer;
 
+  function gbraUpdateSlider() {
+    const track = document.querySelector(".gbra-slider-track");
+    const dots = document.querySelectorAll(".gbra-dot");
+
+    if (!track) return;
+
+    track.style.transform =
+      "translateX(-" + (gbraCurrentSlide * 20) + "%)";
+
+    dots.forEach(function (dot, index) {
+      dot.classList.toggle("active", index === gbraCurrentSlide);
+    });
+  }
+
+  window.gbraGoToSlide = function (index) {
+    gbraCurrentSlide = index;
+    gbraUpdateSlider();
+    gbraRestartAutoSlide();
+  };
+
+  function gbraNextSlide() {
+    gbraCurrentSlide++;
+
+    if (gbraCurrentSlide >= gbraTotalSlides) {
+      gbraCurrentSlide = 0;
+    }
+
+    gbraUpdateSlider();
+  }
+
+  function gbraStartAutoSlide() {
+    gbraTimer = setInterval(gbraNextSlide, 4000);
+  }
+
+  function gbraRestartAutoSlide() {
+    clearInterval(gbraTimer);
+    gbraStartAutoSlide();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    gbraUpdateSlider();
+    gbraStartAutoSlide();
+  });
+})();
+</script>
+   
 </body>
 </html>
 
