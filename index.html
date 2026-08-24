@@ -8,9 +8,110 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700;800&display=swap" rel="stylesheet">   
+   
+   <style>
+      
+/* =========================================================
+   GBRA PAGE SLIDER
+   ========================================================= */
 
-<style>
+.gbra-slider {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  padding: 35px 0 25px;
+}
+
+.gbra-slider-track {
+  display: flex;
+  width: 500%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.gbra-slide {
+  width: 20%;
+  flex: 0 0 20%;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.gbra-slide-box {
+  max-width: 900px;
+  margin: auto;
+  background: #f5f7fa;
+  border: 2px solid var(--gold);
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,43,92,.10);
+}
+
+.gbra-slide-box h2 {
+  color: var(--navy);
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.gbra-slide-box h2 span {
+  color: var(--gold);
+}
+
+.gbra-slide-box p {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.gbra-slide-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.gbra-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.gbra-slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c8cdd5;
+  cursor: pointer;
+}
+
+.gbra-slider-dot.active {
+  background: var(--gold);
+}
+
+@media (max-width: 768px) {
+
+  .gbra-slider {
+    padding: 25px 0 20px;
+  }
+
+  .gbra-slide-box {
+    padding: 24px 15px;
+  }
+
+  .gbra-slide-box h2 {
+    font-size: 24px;
+  }
+
+  .gbra-slide-box p {
+    font-size: 14px;
+  }
+
+}
+
+   
 /* =========================================================
    GLOBAL BANK RECOVERY AGENCY
    CLEAN COMPLETE CSS
