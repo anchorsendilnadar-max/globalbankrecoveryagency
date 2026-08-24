@@ -1,1108 +1,1296 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Global Bank Recovery Agency - Professional and trusted recovery solutions.">
+<title>Global Bank Recovery Agency | GBRA</title>
 
-<title>Global Bank Recovery Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<meta name="description" content="Bank Recovery & Debt Collection Services in Mumbai, Thane, Palghar and Navi Mumbai">
-
-<meta name="keywords" content="Bank Recovery, Debt Collection, Mumbai Recovery Agency">
-
-<meta name="author" content="GBRA">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="icon" type="image/jpeg" href="IMG-20260822-WA0005.jpg">
-    
-    <!-- LANGUAGE FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Noto+Sans+Gujarati:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap"
-    
 <style>
-    
-/* ================= LANGUAGE SELECTOR ================= */
+/* =========================================================
+   GLOBAL BANK RECOVERY AGENCY
+   CLEAN COMPLETE CSS
+   IMPORTANT: Keep ALL CSS inside this single <style> block.
+   ========================================================= */
 
-.language-selector {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 10000;
+:root{
+  --navy:#002b5c;
+  --navy-dark:#001c3d;
+  --gold:#c9972e;
+  --gold-light:#e3b84f;
+  --white:#ffffff;
+  --light:#f5f7fa;
+  --text:#1b2430;
+  --muted:#657080;
+  --border:#d9dee6;
+  --shadow:0 10px 28px rgba(0,43,92,.12);
 }
 
-.language-selector select {
-    background: white;
-    color: #002b5c;
-    border: 2px solid gold;
-    border-radius: 20px;
-    padding: 7px 12px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-@media (max-width: 768px) {
-    .language-selector {
-        top: 5px;
-        right: 5px;
-    }
-
-    .language-selector select {
-        padding: 4px 7px;
-        font-size: 9px;
-    }
-}
-    
-*{
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-font-family:Arial,sans-serif;
-margin:0;
-background:#f4f4f4;
-color:#222;
-}
-/* ================= LANGUAGE FONTS ================= */
-
-body[data-lang="en"],
-body[data-lang="en"] * {
-    font-family: Arial, sans-serif;
+  font-family:Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.5;
+  overflow-x:hidden;
 }
 
-body[data-lang="hi"],
-body[data-lang="hi"] * {
-    font-family: "Noto Sans Devanagari", sans-serif;
+body[data-lang="hi"]{
+  font-family:"Noto Sans Devanagari",Arial,sans-serif;
+}
+body[data-lang="ta"]{
+  font-family:"Noto Sans Tamil",Arial,sans-serif;
+}
+body[data-lang="gu"]{
+  font-family:"Noto Sans Gujarati",Arial,sans-serif;
 }
 
-body[data-lang="mr"],
-body[data-lang="mr"] * {
-    font-family: "Noto Sans Devanagari", sans-serif;
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button,select,input,textarea{font:inherit}
+
+.container{
+  width:min(1150px,92%);
+  margin:auto;
 }
 
-body[data-lang="ta"],
-body[data-lang="ta"] * {
-    font-family: "Noto Sans Tamil", sans-serif;
+/* =========================================================
+   LANGUAGE SELECTOR
+   ========================================================= */
+.language-selector{
+  position:absolute;
+  top:15px;
+  right:20px;
+  z-index:1000;
 }
 
-body[data-lang="gu"],
-body[data-lang="gu"] * {
-    font-family: "Noto Sans Gujarati", sans-serif;
+.language-selector select{
+  appearance:auto;
+  background:#fff;
+  color:var(--navy);
+  border:2px solid var(--gold);
+  border-radius:8px;
+  padding:7px 28px 7px 10px;
+  font-weight:700;
+  font-size:14px;
+  cursor:pointer;
+  outline:none;
 }
 
-/* ================= HEADER ================= */
-
-.header-main {
-    width: 100%;
-    box-sizing: border-box;
-
-    background: #002b5c;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 15px 30px;
-    border-bottom: 4px solid gold;
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header{
+  background:var(--navy);
+  color:#fff;
+  position:relative;
+  padding:18px 0 22px;
+  border-bottom:4px solid var(--gold);
 }
 
-/* LEFT SIDE */
-.logo-section {
-    width: 190px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.header-inner{
+  width:min(1150px,92%);
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding-right:145px;
 }
 
-.logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid gold;
+.logo-wrap{
+  width:100px;
+  height:100px;
+  flex:0 0 100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid var(--gold);
 }
 
-.company-subtitle {
-    color: gold;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.25;
-    margin: 8px 0 0;
-    text-align: center;
+.logo-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 
-/* RIGHT SIDE */
-.header-text {
-    flex: 1;
-    min-width: 0;
-    text-align: center;
+.brand{
+  min-width:0;
 }
 
-.header-text h1 {
-    margin: 0;
-    font-size: 52px;
-    font-weight: 900;
-    line-height: 1.1;
-    text-align: center;
+.brand h1{
+  color:#fff;
+  font-size:34px;
+  line-height:1.05;
+  font-weight:800;
+  letter-spacing:1px;
 }
 
-.header-text hr {
-    border: 0;
-    border-top: 2px solid gold;
-    margin: 12px auto;
-    width: 80%;
-}
-
-.header-text p {
-    margin: 0;
-    font-size: 25px;
-    color: gold;
-    font-weight: 900;
-    text-align: center;
-}
-
-.service-area {
-    color: #ffc107;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.4;
-    text-align: center;
-    margin-top: 12px !important;
-}
-
-
-/* ================= MOBILE HEADER ================= */
-
-@media (max-width: 768px) {
-
-    .header-main {
-        position: sticky;
-        top: 0;
-        z-index: 9999;
-
-        display: grid;
-        grid-template-columns: 105px 1fr;
-        align-items: center;
-
-        width: 100%;
-        min-height: 135px;
-        padding: 10px 8px;
-
-        gap: 10px;
-        box-sizing: border-box;
-    }
-
-    /* LEFT - LOGO */
-    .logo-section {
-        width:  150px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .logo {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid gold;
-    }
-
-    .company-subtitle {
-        font-size: 5px;
-        line-height: 1.15;
-        margin-top: 5px;
-        text-align: center;
-        white-space: normal;
-    }
-
-    /* RIGHT - COMPANY INFORMATION */
-    .header-text {
-        width: 100%;
-        min-width: 0;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    .header-text h1 {
-        margin: 0;
-        font-size: 12px;
-        line-height: 1.08;
-        font-weight: 900;
-        text-align: center;
-        word-break: normal;
-    }
-
-    .header-text hr {
-        width: 90%;
-        margin: 7px auto;
-        border: 0;
-        border-top: 2px solid gold;
-    }
-
-    .header-text p {
-        margin: 0;
-        font-size: 7px;
-        line-height: 1.25;
-        font-weight: 900;
-        text-align: center;
-    }
-
-    .service-area {
-        margin-top: 7px !important;
-        font-size: 6px;
-        line-height: 1.3;
-        text-align: center;
-    }
-}
-
-/* ================= MAIN ================= */
-
-.section{
-width:100%;
-max-width:1200px;
-padding:30px 15px;
-margin:auto;
-}
-
-.card{
-background:white;
-padding:25px;
-margin:20px auto;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
-border-left:5px solid #d4af37;
-max-width:1000px;
-}
-
-.card h2{
-color:#002b5c;
-margin-top:0;
-border-bottom:2px solid #d4af37;
-padding-bottom:10px;
-font-size:26px;
-}
-
-.card p,
-.card li{
-line-height:1.7;
-font-size:16px;
-}
-
-.card ul{
-padding-left:25px;
-}
-
-.card li{
-margin-bottom:12px;
-font-weight:500;
-}
-
-/* ================= MAP ================= */
-
-iframe{
-width:100%;
-height:300px;
-border:0;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
-}
-
-/* ================= OFFICE ADDRESS ================= */
-
-.address-card{
-background:#fff;
-border-left:5px solid #d4af37;
-border-radius:18px;
-padding:25px 22px;
-margin:25px auto;
-max-width:650px;
-box-shadow:0 8px 20px rgba(0,0,0,0.10);
-}
-
-.address-card h2{
-color:#002b5c;
-margin-top:0;
-border-bottom:3px solid #d4af37;
-padding-bottom:10px;
-}
-
-.address-card p{
-font-size:17px;
-line-height:1.7;
-margin:12px 0;
-}
-
-/* ================= CONTACT SECTION ================= */
-
-.contact-section{
-background:white;
-padding:25px;
-margin:25px auto;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
-border-left:5px solid #d4af37;
-max-width:1000px;
-}
-
-.contact-section h2{
-color:#002b5c;
-margin-top:0;
-border-bottom:2px solid #d4af37;
-padding-bottom:10px;
-font-size:26px;
-text-align:left;
-}
-
-/* ================= CONTACT BUTTONS ================= */
-
-.contact-buttons{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:12px;
-flex-wrap:wrap;
-margin:25px 0 10px;
-}
-
-.contact-buttons a{
-background:#002b5c;
-color:white;
-padding:13px 22px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
-text-align:center;
-transition:0.2s;
-}
-
-.contact-buttons a:hover{
-background:#004080;
-transform:translateY(-2px);
-}
-
-/* ================= FORM ================= */
-
-form{
-max-width:700px;
-margin:0 auto;
-}
-
-form input,
-form textarea{
-width:100%;
-padding:14px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:16px;
-font-family:Arial,sans-serif;
-}
-
-form textarea{
-min-height:130px;
-resize:vertical;
-}
-
-form button{
-background:#002b5c;
-color:white;
-padding:14px 20px;
-font-size:16px;
-font-weight:bold;
-border:none;
-border-radius:8px;
-width:100%;
-cursor:pointer;
-margin-top:5px;
-}
-
-form button:hover{
-background:#004080;
-}
-
-/* ================= FOOTER ================= */
-
-.professional-footer{
-background:#002b5c;
-color:white;
-text-align:center;
-padding:35px 15px;
-margin-top:30px;
-font-size:16px;
-line-height:1.7;
-border-top:4px solid gold;
-}
-
-.professional-footer h3{
-margin:0 0 8px;
-font-size:24px;
-}
-
-.footer-tagline{
-color:#ffd700;
-font-weight:bold;
-margin:8px 0 20px;
-}
-
-.footer-links{
-display:flex;
-justify-content:center;
-gap:12px;
-flex-wrap:wrap;
-margin:20px 0;
-}
-
-.footer-links a{
-background:white;
-color:#002b5c;
-padding:10px 18px;
-border-radius:25px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.footer-area{
-margin:20px auto;
-max-width:700px;
-}
-
-.copyright{
-margin:15px 0 0;
-font-size:14px;
-opacity:0.9;
-}
-
-/* ================= FLOATING BUTTONS ================= */
-
-.floating-whatsapp,
-.floating-call,
-.floating-email{
-position:fixed;
-right:20px;
-color:white;
-text-decoration:none;
-font-weight:bold;
-border-radius:50px;
-z-index:9999;
-text-align:center;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-.floating-whatsapp{
-bottom:20px;
-background:#25D366;
-padding:12px 18px;
-}
-
-.floating-call{
-bottom:85px;
-background:#007bff;
-padding:10px 16px;
-}
-
-.floating-email{
-bottom:150px;
-background:#ff6600;
-padding:10px 16px;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-.header-main{
-flex-direction:column;
-gap:15px;
-padding:20px 12px;
-text-align:center;
-}
-
-.logo{
-width:145px;
-height:145px;
+.brand h1 span{
+  color:var(--gold-light);
 }
 
 .company-subtitle{
-font-size:15px;
-margin-top:10px;
+  color:#fff;
+  margin-top:5px;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:.4px;
 }
 
-.header-text{
-width:100%;
+.header-contact{
+  margin-left:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:5px;
+  font-size:14px;
+  font-weight:700;
 }
 
-.header-text h1{
-font-size:34px;
-text-align:center;
-line-height:1.2;
+.header-contact a:hover{color:var(--gold-light)}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+.navbar{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  box-shadow:0 3px 10px rgba(0,0,0,.06);
+  position:sticky;
+  top:0;
+  z-index:900;
 }
 
-.header-text p{
-font-size:17px;
-text-align:center;
-line-height:1.5;
+.nav-inner{
+  width:min(1150px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  padding:9px 0;
 }
 
-.header-text hr{
-margin:12px 20px;
+.nav-inner a{
+  color:var(--navy);
+  font-weight:800;
+  padding:8px 14px;
+  border-radius:7px;
 }
 
+.nav-inner a:hover{
+  background:var(--navy);
+  color:#fff;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  background:
+    radial-gradient(circle at 85% 20%,rgba(201,151,46,.18),transparent 28%),
+    linear-gradient(135deg,#001c3d 0%,#003d7c 60%,#002b5c 100%);
+  color:#fff;
+  padding:58px 0;
+}
+
+.hero-grid{
+  width:min(1150px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:40px;
+  align-items:center;
+}
+
+.hero h2{
+  font-size:46px;
+  line-height:1.08;
+  margin-bottom:15px;
+  font-weight:900;
+}
+
+.hero h2 span{color:var(--gold-light)}
+
+.hero p{
+  font-size:18px;
+  max-width:700px;
+  color:#eef4fb;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:800;
+  border:2px solid transparent;
+  transition:.2s;
+}
+
+.btn-gold{
+  background:var(--gold);
+  color:#fff;
+}
+
+.btn-gold:hover{background:#ad7d20}
+
+.btn-outline{
+  border-color:#fff;
+  color:#fff;
+}
+
+.btn-outline:hover{
+  background:#fff;
+  color:var(--navy);
+}
+
+.hero-card{
+  background:#fff;
+  color:var(--navy);
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 18px 45px rgba(0,0,0,.25);
+  text-align:center;
+}
+
+.hero-card img{
+  width:min(280px,85%);
+  margin:0 auto 10px;
+}
+
+.hero-card h3{
+  font-size:25px;
+  color:var(--navy);
+}
+
+.hero-card p{
+  color:var(--muted);
+  font-size:15px;
+  margin-top:5px;
+}
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+section{
+  padding:58px 0;
+}
+
+.section-title{
+  text-align:center;
+  color:var(--navy);
+  font-size:32px;
+  font-weight:900;
+  margin-bottom:8px;
+}
+
+.section-title span{color:var(--gold)}
+
+.section-subtitle{
+  text-align:center;
+  color:var(--muted);
+  max-width:760px;
+  margin:0 auto 30px;
+}
+
+/* =========================================================
+   SERVICE AREA
+   ========================================================= */
 .service-area{
-font-size:16px !important;
-text-align:center !important;
-line-height:1.6;
-padding:0 5px;
-margin-top:10px !important;
+  margin:0 auto 24px;
+  max-width:1000px;
+  background:#fff;
+  border:2px solid var(--gold);
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  padding:14px 20px;
+  color:var(--navy);
+  text-align:center;
+  font-weight:800;
+  font-size:16px;
 }
 
-.section{
-padding:15px 10px;
+.service-grid{
+  width:min(1150px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.card{
-width:100%;
-padding:20px 16px;
-margin:15px auto;
+.service-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-top:5px solid var(--gold);
+  border-radius:15px;
+  padding:24px 20px;
+  box-shadow:var(--shadow);
+  transition:transform .2s,box-shadow .2s;
 }
 
-.card h2{
-font-size:22px;
+.service-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 32px rgba(0,43,92,.18);
 }
 
-.card p,
-.card li{
-font-size:16px;
+.service-icon{
+  width:56px;
+  height:56px;
+  margin-bottom:14px;
+  border-radius:50%;
+  background:var(--navy);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
 }
 
-.card li{
-margin-bottom:10px;
+.service-card h3{
+  color:var(--navy);
+  font-size:19px;
+  margin-bottom:6px;
 }
 
-.address-card{
-padding:20px 16px;
-margin:20px auto;
+.service-card p{
+  color:var(--muted);
+  font-size:14px;
 }
 
-.address-card h2{
-font-size:22px;
+/* =========================================================
+   WHY US
+   ========================================================= */
+.why{
+  background:var(--light);
 }
 
-.address-card p{
-font-size:16px;
+.feature-grid{
+  width:min(1150px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border:2px solid var(--gold);
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--navy);
 }
 
-iframe{
-height:280px;
+.feature{
+  color:#fff;
+  padding:22px 12px;
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,.25);
 }
 
+.feature:last-child{border-right:0}
+
+.feature-icon{
+  font-size:25px;
+  margin-bottom:8px;
+  color:var(--gold-light);
+}
+
+.feature strong{
+  display:block;
+  font-size:14px;
+  line-height:1.25;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
 .contact-section{
-width:100%;
-padding:20px 16px;
-margin:15px auto;
+  background:#fff;
 }
 
-.contact-section h2{
-font-size:22px;
-text-align:center;
+.contact-grid{
+  width:min(1000px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
 }
 
-.contact-buttons{
-gap:8px;
+.contact-box{
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:25px;
+  box-shadow:var(--shadow);
 }
 
-.contact-buttons a{
-width:140px;
-padding:12px 8px;
-font-size:15px;
+.contact-box h3{
+  color:var(--navy);
+  font-size:23px;
+  margin-bottom:18px;
 }
 
-form input,
-form textarea{
-font-size:16px;
+.contact-row{
+  display:flex;
+  gap:13px;
+  align-items:flex-start;
+  padding:12px 0;
+  border-bottom:1px solid #edf0f4;
 }
 
-.professional-footer{
-padding:30px 12px;
-font-size:15px;
+.contact-row:last-child{border-bottom:0}
+
+.contact-icon{
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
+  border-radius:9px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--navy);
+  color:#fff;
+  font-size:19px;
 }
 
-.professional-footer h3{
-font-size:21px;
+.contact-row strong{
+  color:var(--navy);
+  display:block;
+}
+
+.contact-row small{
+  color:var(--muted);
+  display:block;
+  word-break:break-word;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer{
+  background:var(--navy-dark);
+  color:#fff;
+  text-align:center;
+  padding:30px 15px 80px;
+  border-top:4px solid var(--gold);
+}
+
+.footer-tagline{
+  color:var(--gold-light);
+  font-size:22px;
+  font-weight:900;
 }
 
 .footer-links{
-gap:8px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-top:10px;
+  font-size:14px;
 }
 
-.footer-links a{
-padding:9px 14px;
+.footer-copy{
+  margin-top:18px;
+  color:#b9c4d2;
+  font-size:13px;
 }
 
-.footer-area{
-font-size:14px;
+/* =========================================================
+   FLOATING BUTTONS
+   ========================================================= */
+.floating-actions{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:2000;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
 
-.floating-whatsapp{
-right:10px;
-bottom:15px;
-font-size:12px;
-padding:10px 14px;
+.floating-btn{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:21px;
+  font-weight:900;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  border:2px solid #fff;
+  transition:transform .2s;
 }
 
-.floating-call{
-right:10px;
-bottom:65px;
-font-size:12px;
-padding:8px 13px;
+.floating-btn:hover{transform:scale(1.08)}
+
+.floating-email{background:#334e68}
+.floating-call{background:#075aaa}
+.floating-whatsapp{background:#168b45}
+
+/* =========================================================
+   MOBILE HEADER
+   Desktop values remain unchanged.
+   ========================================================= */
+.mobile-header{
+  display:none;
 }
 
-.floating-email{
-right:10px;
-bottom:115px;
-font-size:12px;
-padding:8px 13px;
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+@media(max-width:768px){
+
+  .language-selector{
+    top:8px;
+    right:8px;
+  }
+
+  .language-selector select{
+    font-size:12px;
+    padding:6px 22px 6px 7px;
+    border-width:1px;
+  }
+
+  .site-header{
+    padding:12px 0 14px;
+  }
+
+  .header-inner{
+    width:94%;
+    gap:9px;
+    padding-right:100px;
+  }
+
+  /* Mobile logo reduced */
+  .logo-wrap{
+    width:50px;
+    height:50px;
+    flex-basis:50px;
+    border-width:2px;
+  }
+
+  /* Mobile brand reduced */
+  .brand h1{
+    font-size:17px;
+    letter-spacing:.3px;
+  }
+
+  .company-subtitle{
+    font-size:9px;
+    margin-top:2px;
+    line-height:1.2;
+  }
+
+  .header-contact{
+    display:none;
+  }
+
+  .navbar{
+    position:relative;
+  }
+
+  .nav-inner{
+    width:96%;
+    justify-content:flex-start;
+    overflow-x:auto;
+    scrollbar-width:none;
+    padding:6px 0;
+    gap:3px;
+  }
+
+  .nav-inner::-webkit-scrollbar{display:none}
+
+  .nav-inner a{
+    flex:0 0 auto;
+    font-size:11px;
+    padding:6px 8px;
+  }
+
+  .hero{
+    padding:32px 0;
+  }
+
+  .hero-grid{
+    width:94%;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .hero h2{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .hero-card{
+    padding:18px;
+  }
+
+  section{
+    padding:38px 0;
+  }
+
+  .section-title{
+    font-size:25px;
+  }
+
+  .section-subtitle{
+    font-size:14px;
+    padding:0 8px;
+  }
+
+  .service-area{
+    width:94%;
+    padding:10px 12px;
+    font-size:13px;
+    line-height:1.4;
+    margin-bottom:18px;
+  }
+
+  .service-grid{
+    width:94%;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .service-card{
+    padding:17px;
+  }
+
+  .service-card h3{
+    font-size:17px;
+  }
+
+  .service-card p{
+    font-size:13px;
+  }
+
+  .feature-grid{
+    width:94%;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .feature{
+    min-height:105px;
+    padding:16px 8px;
+    border-right:1px solid rgba(255,255,255,.25);
+    border-bottom:1px solid rgba(255,255,255,.25);
+  }
+
+  .feature:nth-child(2n){
+    border-right:0;
+  }
+
+  .feature:nth-last-child(-n+1){
+    grid-column:1 / -1;
+    border-right:0;
+  }
+
+  .contact-grid{
+    width:94%;
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .contact-box{
+    padding:18px;
+  }
+
+  .contact-box h3{
+    font-size:20px;
+  }
+
+  .contact-row{
+    gap:10px;
+  }
+
+  .contact-icon{
+    width:38px;
+    height:38px;
+    flex-basis:38px;
+    font-size:17px;
+  }
+
+  .floating-actions{
+    right:10px;
+    bottom:12px;
+    gap:7px;
+  }
+
+  .floating-btn{
+    width:43px;
+    height:43px;
+    font-size:17px;
+    border-width:1px;
+  }
+
+  footer{
+    padding-bottom:75px;
+  }
+
+  .footer-tagline{
+    font-size:17px;
+  }
+
+  .footer-links{
+    gap:10px;
+    font-size:12px;
+  }
 }
 
-}
+/* Small phones */
+@media(max-width:380px){
+  .header-inner{
+    padding-right:92px;
+  }
 
+  .logo-wrap{
+    width:45px;
+    height:45px;
+    flex-basis:45px;
+  }
+
+  .brand h1{
+    font-size:15px;
+  }
+
+  .company-subtitle{
+    font-size:8px;
+  }
+
+  .hero h2{
+    font-size:26px;
+  }
+
+  .floating-btn{
+    width:40px;
+    height:40px;
+    font-size:16px;
+  }
+}
 </style>
 </head>
 
-<body>
+<body data-lang="en">
 
-<!-- ================= HEADER ================= -->
-
-<div class="header-main">
-
-<div class="logo-section">
-
-<img src="IMG-20260822-WA0005.jpg" class="logo" alt="Global Bank Recovery Agency Logo">
-
-<p class="company-subtitle">
-Professional Recovery &<br>
-Collection Services Since 2020
-</p>
-
-</div>
-
-<div class="header-text">
-
-<h1>
-GLOBAL BANK<br>
-RECOVERY AGENCY
-</h1>
-
-<hr>
-
-<p>TRUST • RECOVERY • RESULTS</p>
-
-<hr>
-
-<p class="service-area">
-Service Area - Mumbai, Thane, Palghar,<br>
-Navi Mumbai, Panvel, Kalyan-Dombivli
-</p>
-
-</div>
-<!-- LANGUAGE SELECTOR -->
+<!-- =========================================================
+     LANGUAGE SELECTOR
+     ========================================================= -->
 <div class="language-selector">
-    <select id="languageSelect" onchange="changeLanguage(this.value)">
-        <option value="en">English</option>
-        <option value="hi">हिन्दी</option>
-        <option value="ta">தமிழ்</option>
-        <option value="mr">मराठी</option>
-        <option value="gu">ગુજરાતી</option>
-    </select>
-</div>
-    
+  <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Language">
+    <option value="en">English</option>
+    <option value="hi">हिन्दी</option>
+    <option value="ta">தமிழ்</option>
+    <option value="mr">मराठी</option>
+    <option value="gu">ગુજરાતી</option>
+  </select>
 </div>
 
-
-<!-- ================= MAIN CONTENT ================= -->
-
-<div class="section">
-
-
-<!-- OUR SERVICES -->
-
-<div class="card">
-
-<h2>Our Services</h2>
-
-<ul>
-
-<li>Bank Recovery Services</li>
-
-<li>Debt Collection Services</li>
-
-<li>Field Verification</li>
-
-<li>Recovery Support</li>
-
-<li>Customer Follow Up</li>
-
-<li>Loan Recovery Management</li>
-
-<li>Skip Tracing Services</li>
-
-<li>Telecalling & Collection Support</li>
-
-<li>Legal Recovery Coordination</li>
-
-</ul>
-
-</div>
-
-
-<!-- OUR LOCATION -->
-
-<div class="card">
-
-<h2>Our Location</h2>
-
-<iframe
-src="https://maps.google.com/maps?q=19.257113,72.876083&z=15&output=embed"
-allowfullscreen=""
-loading="lazy">
-</iframe>
-
-</div>
-
-
-<!-- WHY CHOOSE US -->
-
-<div class="card">
-
-<h2>Why Choose Us?</h2>
-
-<ul>
-
-<li>✔ Professional Recovery Team</li>
-
-<li>✔ Bank & Financial Collection Support</li>
-
-<li>✔ Field Verification Services</li>
-
-<li>✔ Legal Recovery Coordination</li>
-
-<li>✔ Customer Follow-Up Management</li>
-
-<li>✔ Trusted Recovery Solutions Since 2020</li>
-
-</ul>
-
-</div>
-
-
-<!-- WHY CLIENTS TRUST US -->
-
-<div class="card">
-
-<h2>Why Clients Trust Us</h2>
-
-<ul>
-
-<li>08+ Years Experience</li>
-
-<li>Professional Recovery Team</li>
-
-<li>Legal & Ethical Process</li>
-
-<li>Fast Case Resolution</li>
-
-<li>Mumbai • Thane • Palghar • Navi Mumbai</li>
-
-</ul>
-
-</div>
-
-
-<!-- OFFICE ADDRESS -->
-
-<div class="contact-section">
-
-<h2>Office Address</h2>
-
-<p>
-<strong>Global Bank Recovery Agency</strong>
-</p>
-
-<p>
-3, Anthony Chawl,<br>
-Ketkipada, Dahisar East,<br>
-Mumbai - 400068
-</p>
-
-<p>
-<strong>Mobile:</strong> 8451817707
-</p>
-
-<p>
-<strong>Email:</strong><br>
-globalbankrecoveryagency26@gmail.com
-</p>
-
-</div>
-
-
-<!-- CONTACT US -->
-
-<div class="contact-section">
-
-<h2>CONTACT US</h2>
-
-
-<!-- CONTACT FORM -->
-
-<form
-action="https://formsubmit.co/globalbankrecoveryagency26@gmail.com"
-method="POST">
-
-<input
-type="hidden"
-name="_subject"
-value="New Website Contact Request">
-
-<input
-type="hidden"
-name="_captcha"
-value="false">
-
-<input
-type="text"
-name="name"
-placeholder="Full Name"
-required>
-
-<input
-type="tel"
-name="mobile"
-placeholder="Mobile Number"
-required>
-
-<input
-type="email"
-name="email"
-placeholder="Email Address"
-required>
-
-<textarea
-name="message"
-placeholder="Enter Details"></textarea>
-
-<button type="submit">
-Submit Request
-</button>
-
-</form>
-
-
-<!-- WHATSAPP CALL EMAIL -->
-
-<div class="contact-buttons">
-
-<a href="https://wa.me/918451817707">
-WhatsApp
-</a>
-
-<a href="tel:8451817707">
-Call
-</a>
-
-<a href="mailto:globalbankrecoveryagency26@gmail.com">
-Email
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ================= PROFESSIONAL FOOTER ================= -->
-
-<footer class="professional-footer">
-
-<h3>
-Global Bank Recovery Agency
-</h3>
-
-<p>
-Professional Recovery & Collection Services
-</p>
-
-<p class="footer-tagline">
-TRUST • RECOVERY • RESULTS
-</p>
-
-<div class="footer-links">
-
-<a href="tel:8451817707">
-Call Us
-</a>
-
-<a href="mailto:globalbankrecoveryagency26@gmail.com">
-Email Us
-</a>
-
-<a href="https://wa.me/918451817707">
-WhatsApp
-</a>
-
-</div>
-
-<p class="footer-area">
-Mumbai • Thane • Palghar • Navi Mumbai • Panvel • Kalyan-Dombivli
-</p>
-
-<p class="copyright">
-© 2026 Global Bank Recovery Agency. All Rights Reserved.
-</p>
-
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="site-header">
+  <div class="header-inner">
+
+    <div class="logo-wrap">
+      <!-- Keep your existing logo filename/path here if different. -->
+      <img src="logo.png" alt="Global Bank Recovery Agency Logo">
+    </div>
+
+    <div class="brand">
+      <h1><span>GLOBAL</span> BANK RECOVERY AGENCY</h1>
+      <div class="company-subtitle" data-i18n="subtitle">
+        PROFESSIONAL | TRUSTED | RESULT ORIENTED
+      </div>
+    </div>
+
+    <div class="header-contact">
+      <a href="tel:8451817707">☎ 8451817707</a>
+      <a href="mailto:globalbankrecoveryagency26@gmail.com">✉ globalbankrecoveryagency26@gmail.com</a>
+    </div>
+
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#home" data-i18n="navHome">Home</a>
+    <a href="#services" data-i18n="navServices">Services</a>
+    <a href="#about" data-i18n="navAbout">About</a>
+    <a href="#contact" data-i18n="navContact">Contact</a>
+  </div>
+</nav>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<main id="home">
+
+<section class="hero">
+  <div class="hero-grid">
+
+    <div>
+      <h2 data-i18n="heroTitle">
+        YOUR RECOVERY,<br><span>OUR RESPONSIBILITY</span>
+      </h2>
+
+      <p data-i18n="heroText">
+        Professional, trusted and result-oriented recovery solutions for banks,
+        financial institutions and businesses.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-gold" href="#services" data-i18n="viewServices">View Services</a>
+        <a class="btn btn-outline" href="tel:8451817707" data-i18n="callNow">Call Now</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <img src="logo.png" alt="GBRA">
+      <h3>GBRA</h3>
+      <p data-i18n="heroCardText">Trust • Recovery • Results</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     SERVICES
+     ========================================================= -->
+<section id="services">
+  <h2 class="section-title" data-i18n="servicesTitle">Our <span>Services</span></h2>
+  <p class="section-subtitle" data-i18n="servicesIntro">
+    Comprehensive recovery and field-support services with a professional approach.
+  </p>
+
+  <div class="service-area" data-i18n="serviceArea">
+    Service Area: Mumbai &amp; Pan India Recovery Network
+  </div>
+
+  <div class="service-grid">
+
+    <article class="service-card">
+      <div class="service-icon">🏍</div>
+      <h3 data-i18n="s1t">Two Wheeler Recovery</h3>
+      <p data-i18n="s1p">Fast and efficient recovery of two-wheelers.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">🚗</div>
+      <h3 data-i18n="s2t">Four-Wheeler Recovery</h3>
+      <p data-i18n="s2p">Secure recovery of cars and four-wheelers.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">🚚</div>
+      <h3 data-i18n="s3t">Commercial Vehicle Recovery</h3>
+      <p data-i18n="s3p">Recovery support for commercial vehicles and trucks.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">🏠</div>
+      <h3 data-i18n="s4t">Property Recovery</h3>
+      <p data-i18n="s4p">Residential and commercial property recovery support.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">🏗</div>
+      <h3 data-i18n="s5t">Construction Site Recovery</h3>
+      <p data-i18n="s5p">Recovery of dues from construction sites and projects.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">⚖</div>
+      <h3 data-i18n="s6t">Litigation Land Recovery</h3>
+      <p data-i18n="s6p">Support for litigation and disputed land recovery.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">💳</div>
+      <h3 data-i18n="s7t">Loan &amp; Credit Card Recovery</h3>
+      <p data-i18n="s7p">Professional overdue recovery solutions.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">🔎</div>
+      <h3 data-i18n="s8t">Field Investigation</h3>
+      <p data-i18n="s8p">Detailed verification, field visits and reporting.</p>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon">📍</div>
+      <h3 data-i18n="s9t">Skip Tracing</h3>
+      <p data-i18n="s9p">Locate defaulters and relevant assets.</p>
+    </article>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     WHY US
+     ========================================================= -->
+<section id="about" class="why">
+  <h2 class="section-title" data-i18n="whyTitle">Why <span>Choose Us</span></h2>
+  <p class="section-subtitle" data-i18n="whyIntro">
+    A professional recovery partner focused on responsible execution and clear reporting.
+  </p>
+
+  <div class="feature-grid">
+    <div class="feature">
+      <div class="feature-icon">🛡</div>
+      <strong data-i18n="f1">Legal &amp; Professional Approach</strong>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">👥</div>
+      <strong data-i18n="f2">Experienced &amp; Trained Team</strong>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📄</div>
+      <strong data-i18n="f3">Pan India Recovery Network</strong>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🎯</div>
+      <strong data-i18n="f4">High Success Rate</strong>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🤝</div>
+      <strong data-i18n="f5">Confidential &amp; Reliable</strong>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+<section id="contact" class="contact-section">
+  <h2 class="section-title" data-i18n="contactTitle">Contact <span>Us</span></h2>
+  <p class="section-subtitle" data-i18n="contactIntro">
+    Contact our office for professional recovery assistance.
+  </p>
+
+  <div class="contact-grid">
+
+    <div class="contact-box">
+      <h3 data-i18n="officeTitle">Office Contact</h3>
+
+      <div class="contact-row">
+        <div class="contact-icon">☎</div>
+        <div>
+          <strong data-i18n="officeLabel">Office</strong>
+          <small><a href="tel:8451817707">8451817707</a></small>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">◉</div>
+        <div>
+          <strong>WhatsApp</strong>
+          <small><a href="https://wa.me/918451817707">8451817707</a></small>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">✉</div>
+        <div>
+          <strong data-i18n="emailLabel">Email</strong>
+          <small><a href="mailto:globalbankrecoveryagency26@gmail.com">globalbankrecoveryagency26@gmail.com</a></small>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <h3 data-i18n="addressTitle">Office Address</h3>
+
+      <div class="contact-row">
+        <div class="contact-icon">⌖</div>
+        <div>
+          <strong data-i18n="addressLabel">Address</strong>
+          <small>
+            3, Anthony Chawl, Ketkipada,<br>
+            Dahisar East, Mumbai - 400068
+          </small>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">🌐</div>
+        <div>
+          <strong>Website</strong>
+          <small>globalbankrecoveryagency.com</small>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">★</div>
+        <div>
+          <strong data-i18n="estd">ESTD - 2020</strong>
+          <small>MUMBAI - 68</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer>
+  <div class="footer-tagline" data-i18n="footerTagline">
+    YOUR RECOVERY, OUR RESPONSIBILITY
+  </div>
+
+  <div class="footer-links">
+    <a href="#home" data-i18n="navHome2">Home</a>
+    <a href="#services" data-i18n="navServices2">Services</a>
+    <a href="#about" data-i18n="navAbout2">About</a>
+    <a href="#contact" data-i18n="navContact2">Contact</a>
+  </div>
+
+  <div class="footer-copy">
+    © <span id="year"></span> Global Bank Recovery Agency. All Rights Reserved.
+  </div>
 </footer>
 
+<!-- =========================================================
+     FLOATING EMAIL / CALL / WHATSAPP
+     ========================================================= -->
+<div class="floating-actions" aria-label="Contact actions">
 
-<!-- ================= FLOATING BUTTONS ================= -->
+  <a class="floating-btn floating-email"
+     href="mailto:globalbankrecoveryagency26@gmail.com"
+     aria-label="Email"
+     title="Email">✉</a>
 
-<a
-href="https://wa.me/918451817707"
-class="floating-whatsapp">
-WhatsApp
-</a>
+  <a class="floating-btn floating-call"
+     href="tel:8451817707"
+     aria-label="Call"
+     title="Call">☎</a>
 
-<a
-href="tel:8451817707"
-class="floating-call">
-Call
-</a>
+  <a class="floating-btn floating-whatsapp"
+     href="https://wa.me/918451817707"
+     target="_blank"
+     rel="noopener"
+     aria-label="WhatsApp"
+     title="WhatsApp">◉</a>
 
-<a
-href="mailto:globalbankrecoveryagency26@gmail.com"
-class="floating-email">
-Email
-</a>
+</div>
 
 <script>
-function changeLanguage(lang) {
+/* =========================================================
+   MULTILINGUAL TRANSLATION
+   English is default. Selection persists in localStorage.
+   ========================================================= */
 
-    document.body.setAttribute("data-lang", lang);
+const translations = {
 
-    const translations = {
+  en:{
+    subtitle:"PROFESSIONAL | TRUSTED | RESULT ORIENTED",
+    navHome:"Home", navServices:"Services", navAbout:"About", navContact:"Contact",
+    heroTitle:"YOUR RECOVERY,<br><span>OUR RESPONSIBILITY</span>",
+    heroText:"Professional, trusted and result-oriented recovery solutions for banks, financial institutions and businesses.",
+    viewServices:"View Services", callNow:"Call Now",
+    heroCardText:"Trust • Recovery • Results",
+    servicesTitle:"Our <span>Services</span>",
+    servicesIntro:"Comprehensive recovery and field-support services with a professional approach.",
+    serviceArea:"Service Area: Mumbai & Pan India Recovery Network",
+    s1t:"Two Wheeler Recovery", s1p:"Fast and efficient recovery of two-wheelers.",
+    s2t:"Four-Wheeler Recovery", s2p:"Secure recovery of cars and four-wheelers.",
+    s3t:"Commercial Vehicle Recovery", s3p:"Recovery support for commercial vehicles and trucks.",
+    s4t:"Property Recovery", s4p:"Residential and commercial property recovery support.",
+    s5t:"Construction Site Recovery", s5p:"Recovery of dues from construction sites and projects.",
+    s6t:"Litigation Land Recovery", s6p:"Support for litigation and disputed land recovery.",
+    s7t:"Loan & Credit Card Recovery", s7p:"Professional overdue recovery solutions.",
+    s8t:"Field Investigation", s8p:"Detailed verification, field visits and reporting.",
+    s9t:"Skip Tracing", s9p:"Locate defaulters and relevant assets.",
+    whyTitle:"Why <span>Choose Us</span>",
+    whyIntro:"A professional recovery partner focused on responsible execution and clear reporting.",
+    f1:"Legal & Professional Approach", f2:"Experienced & Trained Team",
+    f3:"Pan India Recovery Network", f4:"High Success Rate", f5:"Confidential & Reliable",
+    contactTitle:"Contact <span>Us</span>",
+    contactIntro:"Contact our office for professional recovery assistance.",
+    officeTitle:"Office Contact", officeLabel:"Office",
+    emailLabel:"Email", addressTitle:"Office Address", addressLabel:"Address",
+    estd:"ESTD - 2020",
+    footerTagline:"YOUR RECOVERY, OUR RESPONSIBILITY",
+    navHome2:"Home", navServices2:"Services", navAbout2:"About", navContact2:"Contact"
+  },
 
-        en: {
-            services: "Our Services",
-            location: "Our Location",
-            contact: "CONTACT US",
-            address: "Office Address"
-        },
+  hi:{
+    subtitle:"पेशेवर | विश्वसनीय | परिणाम उन्मुख",
+    navHome:"होम", navServices:"सेवाएं", navAbout:"हमारे बारे में", navContact:"संपर्क",
+    heroTitle:"आपकी वसूली,<br><span>हमारी जिम्मेदारी</span>",
+    heroText:"बैंकों, वित्तीय संस्थानों और व्यवसायों के लिए पेशेवर, विश्वसनीय और परिणाम उन्मुख वसूली समाधान।",
+    viewServices:"सेवाएं देखें", callNow:"अभी कॉल करें",
+    heroCardText:"विश्वास • वसूली • परिणाम",
+    servicesTitle:"हमारी <span>सेवाएं</span>",
+    servicesIntro:"पेशेवर दृष्टिकोण के साथ व्यापक वसूली और फील्ड सहायता सेवाएं।",
+    serviceArea:"सेवा क्षेत्र: मुंबई और पैन इंडिया रिकवरी नेटवर्क",
+    s1t:"दो पहिया वाहन वसूली", s1p:"दो पहिया वाहनों की तेज और प्रभावी वसूली।",
+    s2t:"चार पहिया वाहन वसूली", s2p:"कार और चार पहिया वाहनों की सुरक्षित वसूली।",
+    s3t:"कमर्शियल वाहन वसूली", s3p:"कमर्शियल वाहनों और ट्रकों के लिए वसूली सहायता।",
+    s4t:"संपत्ति वसूली", s4p:"आवासीय और वाणिज्यिक संपत्ति वसूली सहायता।",
+    s5t:"निर्माण स्थल वसूली", s5p:"निर्माण स्थलों और परियोजनाओं से बकाया वसूली।",
+    s6t:"विवादित भूमि वसूली", s6p:"मुकदमेबाजी और विवादित भूमि वसूली सहायता।",
+    s7t:"लोन और क्रेडिट कार्ड वसूली", s7p:"पेशेवर बकाया वसूली समाधान।",
+    s8t:"फील्ड जांच", s8p:"विस्तृत सत्यापन, फील्ड विजिट और रिपोर्टिंग।",
+    s9t:"स्किप ट्रेसिंग", s9p:"डिफॉल्टर और संबंधित संपत्तियों का पता लगाना।",
+    whyTitle:"हमें <span>क्यों चुनें</span>",
+    whyIntro:"जिम्मेदार कार्यप्रणाली और स्पष्ट रिपोर्टिंग पर केंद्रित पेशेवर वसूली भागीदार।",
+    f1:"कानूनी और पेशेवर दृष्टिकोण", f2:"अनुभवी और प्रशिक्षित टीम",
+    f3:"पैन इंडिया रिकवरी नेटवर्क", f4:"उच्च सफलता दर", f5:"गोपनीय और विश्वसनीय",
+    contactTitle:"हमसे <span>संपर्क करें</span>",
+    contactIntro:"पेशेवर वसूली सहायता के लिए हमारे कार्यालय से संपर्क करें।",
+    officeTitle:"कार्यालय संपर्क", officeLabel:"कार्यालय",
+    emailLabel:"ईमेल", addressTitle:"कार्यालय का पता", addressLabel:"पता",
+    estd:"स्थापना - 2020",
+    footerTagline:"आपकी वसूली, हमारी जिम्मेदारी",
+    navHome2:"होम", navServices2:"सेवाएं", navAbout2:"हमारे बारे में", navContact2:"संपर्क"
+  },
 
-        hi: {
-            services: "हमारी सेवाएं",
-            location: "हमारा स्थान",
-            contact: "संपर्क करें",
-            address: "कार्यालय का पता"
-        },
+  ta:{
+    subtitle:"தொழில்முறை | நம்பகமான | முடிவு நோக்கிய",
+    navHome:"முகப்பு", navServices:"சேவைகள்", navAbout:"எங்களை பற்றி", navContact:"தொடர்பு",
+    heroTitle:"உங்கள் வசூல்,<br><span>எங்கள் பொறுப்பு</span>",
+    heroText:"வங்கிகள், நிதி நிறுவனங்கள் மற்றும் வணிகங்களுக்கான தொழில்முறை, நம்பகமான மற்றும் முடிவு நோக்கிய வசூல் தீர்வுகள்.",
+    viewServices:"சேவைகளை பார்க்க", callNow:"இப்போது அழைக்கவும்",
+    heroCardText:"நம்பிக்கை • வசூல் • முடிவுகள்",
+    servicesTitle:"எங்கள் <span>சேவைகள்</span>",
+    servicesIntro:"தொழில்முறை அணுகுமுறையுடன் விரிவான வசூல் மற்றும் கள உதவி சேவைகள்.",
+    serviceArea:"சேவை பகுதி: மும்பை மற்றும் இந்தியா முழுவதும் வசூல் நெட்வொர்க்",
+    s1t:"இருசக்கர வாகன வசூல்", s1p:"இருசக்கர வாகனங்களை விரைவாகவும் திறமையாகவும் வசூலித்தல்.",
+    s2t:"நான்கு சக்கர வாகன வசூல்", s2p:"கார்கள் மற்றும் நான்கு சக்கர வாகனங்களின் பாதுகாப்பான வசூல்.",
+    s3t:"வணிக வாகன வசூல்", s3p:"வணிக வாகனங்கள் மற்றும் லாரிகளுக்கான வசூல் உதவி.",
+    s4t:"சொத்து வசூல்", s4p:"குடியிருப்பு மற்றும் வணிக சொத்து வசூல் உதவி.",
+    s5t:"கட்டுமான தள வசூல்", s5p:"கட்டுமான தளங்கள் மற்றும் திட்டங்களில் நிலுவை வசூல்.",
+    s6t:"வழக்கு நில வசூல்", s6p:"வழக்குகள் மற்றும் சர்ச்சைக்குரிய நில வசூல் உதவி.",
+    s7t:"கடன் மற்றும் கிரெடிட் கார்டு வசூல்", s7p:"தொழில்முறை நிலுவை வசூல் தீர்வுகள்.",
+    s8t:"கள விசாரணை", s8p:"விரிவான சரிபார்ப்பு, களப் பயணம் மற்றும் அறிக்கையிடல்.",
+    s9t:"ஸ்கிப் டிரேசிங்", s9p:"தவறுபவர்களையும் தொடர்புடைய சொத்துகளையும் கண்டறிதல்.",
+    whyTitle:"எங்களை <span>ஏன் தேர்வு செய்ய வேண்டும்</span>",
+    whyIntro:"பொறுப்பான செயல்பாடு மற்றும் தெளிவான அறிக்கையிடலில் கவனம் செலுத்தும் தொழில்முறை வசூல் கூட்டாளர்.",
+    f1:"சட்ட மற்றும் தொழில்முறை அணுகுமுறை", f2:"அனுபவமிக்க மற்றும் பயிற்சி பெற்ற குழு",
+    f3:"இந்தியா முழுவதும் வசூல் நெட்வொர்க்", f4:"உயர் வெற்றி விகிதம்", f5:"ரகசியமான மற்றும் நம்பகமான",
+    contactTitle:"எங்களை <span>தொடர்பு கொள்ளுங்கள்</span>",
+    contactIntro:"தொழில்முறை வசூல் உதவிக்காக எங்கள் அலுவலகத்தை தொடர்பு கொள்ளுங்கள்.",
+    officeTitle:"அலுவலக தொடர்பு", officeLabel:"அலுவலகம்",
+    emailLabel:"மின்னஞ்சல்", addressTitle:"அலுவலக முகவரி", addressLabel:"முகவரி",
+    estd:"நிறுவப்பட்டது - 2020",
+    footerTagline:"உங்கள் வசூல், எங்கள் பொறுப்பு",
+    navHome2:"முகப்பு", navServices2:"சேவைகள்", navAbout2:"எங்களை பற்றி", navContact2:"தொடர்பு"
+  },
 
-        ta: {
-            services: "எங்கள் சேவைகள்",
-            location: "எங்கள் இடம்",
-            contact: "தொடர்பு கொள்ளுங்கள்",
-            address: "அலுவலக முகவரி"
-        },
+  mr:{
+    subtitle:"व्यावसायिक | विश्वासार्ह | परिणामाभिमुख",
+    navHome:"मुख्यपृष्ठ", navServices:"सेवा", navAbout:"आमच्याबद्दल", navContact:"संपर्क",
+    heroTitle:"तुमची वसुली,<br><span>आमची जबाबदारी</span>",
+    heroText:"बँका, वित्तीय संस्था आणि व्यवसायांसाठी व्यावसायिक, विश्वासार्ह आणि परिणामाभिमुख वसुली उपाय.",
+    viewServices:"सेवा पहा", callNow:"आता कॉल करा",
+    heroCardText:"विश्वास • वसुली • परिणाम",
+    servicesTitle:"आमच्या <span>सेवा</span>",
+    servicesIntro:"व्यावसायिक दृष्टिकोनासह सर्वसमावेशक वसुली आणि फील्ड सपोर्ट सेवा.",
+    serviceArea:"सेवा क्षेत्र: मुंबई आणि पॅन इंडिया रिकव्हरी नेटवर्क",
+    s1t:"दुचाकी वाहन वसुली", s1p:"दुचाकी वाहनांची जलद आणि प्रभावी वसुली.",
+    s2t:"चारचाकी वाहन वसुली", s2p:"कार आणि चारचाकी वाहनांची सुरक्षित वसुली.",
+    s3t:"व्यावसायिक वाहन वसुली", s3p:"व्यावसायिक वाहने आणि ट्रकसाठी वसुली सहाय्य.",
+    s4t:"मालमत्ता वसुली", s4p:"निवासी आणि व्यावसायिक मालमत्ता वसुली सहाय्य.",
+    s5t:"बांधकाम साइट वसुली", s5p:"बांधकाम साइट आणि प्रकल्पांमधील थकीत रकमेची वसुली.",
+    s6t:"लिटिगेशन जमीन वसुली", s6p:"वादग्रस्त आणि न्यायालयीन प्रकरणातील जमीन वसुली सहाय्य.",
+    s7t:"कर्ज आणि क्रेडिट कार्ड वसुली", s7p:"व्यावसायिक थकीत रक्कम वसुली उपाय.",
+    s8t:"फील्ड तपासणी", s8p:"सविस्तर पडताळणी, फील्ड भेटी आणि अहवाल.",
+    s9t:"स्किप ट्रेसिंग", s9p:"डिफॉल्टर आणि संबंधित मालमत्तांचा शोध.",
+    whyTitle:"आम्हाला <span>का निवडावे</span>",
+    whyIntro:"जबाबदार कार्यपद्धती आणि स्पष्ट अहवालावर लक्ष केंद्रित करणारा व्यावसायिक वसुली भागीदार.",
+    f1:"कायदेशीर आणि व्यावसायिक दृष्टिकोन", f2:"अनुभवी आणि प्रशिक्षित टीम",
+    f3:"पॅन इंडिया रिकव्हरी नेटवर्क", f4:"उच्च यश दर", f5:"गोपनीय आणि विश्वासार्ह",
+    contactTitle:"आमच्याशी <span>संपर्क साधा</span>",
+    contactIntro:"व्यावसायिक वसुली सहाय्यासाठी आमच्या कार्यालयाशी संपर्क साधा.",
+    officeTitle:"कार्यालय संपर्क", officeLabel:"कार्यालय",
+    emailLabel:"ईमेल", addressTitle:"कार्यालयाचा पत्ता", addressLabel:"पत्ता",
+    estd:"स्थापना - 2020",
+    footerTagline:"तुमची वसुली, आमची जबाबदारी",
+    navHome2:"मुख्यपृष्ठ", navServices2:"सेवा", navAbout2:"आमच्याबद्दल", navContact2:"संपर्क"
+  },
 
-        mr: {
-            services: "आमच्या सेवा",
-            location: "आमचे स्थान",
-            contact: "संपर्क करा",
-            address: "कार्यालयाचा पत्ता"
-        },
+  gu:{
+    subtitle:"વ્યાવસાયિક | વિશ્વસનીય | પરિણામલક્ષી",
+    navHome:"હોમ", navServices:"સેવાઓ", navAbout:"અમારા વિશે", navContact:"સંપર્ક",
+    heroTitle:"તમારી વસૂલાત,<br><span>અમારી જવાબદારી</span>",
+    heroText:"બેંકો, નાણાકીય સંસ્થાઓ અને વ્યવસાયો માટે વ્યાવસાયિક, વિશ્વસનીય અને પરિણામલક્ષી વસૂલાત ઉકેલો.",
+    viewServices:"સેવાઓ જુઓ", callNow:"હમણાં કૉલ કરો",
+    heroCardText:"વિશ્વાસ • વસૂલાત • પરિણામ",
+    servicesTitle:"અમારી <span>સેવાઓ</span>",
+    servicesIntro:"વ્યાવસાયિક અભિગમ સાથે વ્યાપક વસૂલાત અને ફિલ્ડ સપોર્ટ સેવાઓ.",
+    serviceArea:"સેવા વિસ્તાર: મુંબઈ અને પાન ઇન્ડિયા રિકવરી નેટવર્ક",
+    s1t:"ટુ વ્હીલર રિકવરી", s1p:"ટુ વ્હીલરની ઝડપી અને અસરકારક વસૂલાત.",
+    s2t:"ફોર વ્હીલર રિકવરી", s2p:"કાર અને ફોર વ્હીલરની સુરક્ષિત વસૂલાત.",
+    s3t:"કોમર્શિયલ વાહન રિકવરી", s3p:"કોમર્શિયલ વાહનો અને ટ્રક માટે વસૂલાત સહાય.",
+    s4t:"પ્રોપર્ટી રિકવરી", s4p:"રહેણાંક અને વ્યાવસાયિક મિલકત વસૂલાત સહાય.",
+    s5t:"કન્સ્ટ્રક્શન સાઇટ રિકવરી", s5p:"કન્સ્ટ્રક્શન સાઇટ અને પ્રોજેક્ટમાંથી બાકી રકમની વસૂલાત.",
+    s6t:"લિટિગેશન લેન્ડ રિકવરી", s6p:"વિવાદિત જમીન અને કાનૂની કેસમાં વસૂલાત સહાય.",
+    s7t:"લોન અને ક્રેડિટ કાર્ડ રિકવરી", s7p:"વ્યાવસાયિક બાકી રકમ વસૂલાત ઉકેલો.",
+    s8t:"ફિલ્ડ ઇન્વેસ્ટિગેશન", s8p:"વિગતવાર ચકાસણી, ફિલ્ડ મુલાકાત અને રિપોર્ટિંગ.",
+    s9t:"સ્કિપ ટ્રેસિંગ", s9p:"ડિફોલ્ટર અને સંબંધિત સંપત્તિઓ શોધવી.",
+    whyTitle:"અમને <span>શા માટે પસંદ કરો</span>",
+    whyIntro:"જવાબદાર કામગીરી અને સ્પષ્ટ રિપોર્ટિંગ પર ધ્યાન આપતો વ્યાવસાયિક વસૂલાત ભાગીદાર.",
+    f1:"કાનૂની અને વ્યાવસાયિક અભિગમ", f2:"અનુભવી અને પ્રશિક્ષિત ટીમ",
+    f3:"પાન ઇન્ડિયા રિકવરી નેટવર્ક", f4:"ઉચ્ચ સફળતા દર", f5:"ગોપનીય અને વિશ્વસનીય",
+    contactTitle:"અમારો <span>સંપર્ક કરો</span>",
+    contactIntro:"વ્યાવસાયિક વસૂલાત સહાય માટે અમારી ઓફિસનો સંપર્ક કરો.",
+    officeTitle:"ઓફિસ સંપર્ક", officeLabel:"ઓફિસ",
+    emailLabel:"ઈમેઈલ", addressTitle:"ઓફિસ સરનામું", addressLabel:"સરનામું",
+    estd:"સ્થાપના - 2020",
+    footerTagline:"તમારી વસૂલાત, અમારી જવાબદારી",
+    navHome2:"હોમ", navServices2:"સેવાઓ", navAbout2:"અમારા વિશે", navContact2:"સંપર્ક"
+  }
+};
 
-        gu: {
-            services: "અમારી સેવાઓ",
-            location: "અમારું સ્થાન",
-            contact: "અમારો સંપર્ક કરો",
-            address: "ઓફિસનું સરનામું"
-        }
-    };
+function changeLanguage(lang){
+  const data = translations[lang] || translations.en;
 
-    const t = translations[lang];
+  document.body.setAttribute("data-lang", lang);
+  document.documentElement.lang = lang;
 
-    if (!t) return;
-
-    const serviceTitle =
-        document.querySelector(".card h2");
-
-    if (serviceTitle) {
-        serviceTitle.innerText = t.services;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if(Object.prototype.hasOwnProperty.call(data,key)){
+      el.innerHTML = data[key];
     }
+  });
 
-    document.querySelectorAll("h2").forEach(function(el) {
+  const selector = document.getElementById("languageSelect");
+  if(selector) selector.value = lang;
 
-        const oldText = el.innerText.trim();
-
-        if (
-            oldText === "Our Location" ||
-            oldText === "हमारा स्थान" ||
-            oldText === "எங்கள் இடம்" ||
-            oldText === "आमचे स्थान" ||
-            oldText === "અમારું સ્થાન"
-        ) {
-            el.innerText = t.location;
-        }
-
-        if (
-            oldText === "CONTACT US" ||
-            oldText === "संपर्क करें" ||
-            oldText === "தொடர்பு கொள்ளுங்கள்" ||
-            oldText === "संपर्क करा" ||
-            oldText === "અમારો સંપર્ક કરો"
-        ) {
-            el.innerText = t.contact;
-        }
-
-        if (
-            oldText === "Office Address" ||
-            oldText === "कार्यालय का पता" ||
-            oldText === "அலுவலக முகவரி" ||
-            oldText === "कार्यालयाचा पत्ता" ||
-            oldText === "ઓફિસનું સરનામું"
-        ) {
-            el.innerText = t.address;
-        }
-    });
-
-    localStorage.setItem("selectedLanguage", lang);
+  localStorage.setItem("selectedLanguage",lang);
 }
 
+document.addEventListener("DOMContentLoaded",()=>{
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-document.addEventListener("DOMContentLoaded", function() {
-
-    const savedLanguage =
-        localStorage.getItem("selectedLanguage") || "en";
-
-    document.body.setAttribute(
-        "data-lang",
-        savedLanguage
-    );
-
-    const selector =
-        document.getElementById("languageSelect");
-
-    if (selector) {
-        selector.value = savedLanguage;
-    }
+  const saved = localStorage.getItem("selectedLanguage") || "en";
+  changeLanguage(saved);
 });
 </script>
-    
+
 </body>
 </html>
