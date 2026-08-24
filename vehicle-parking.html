@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bank Recovery Vehicle Parking Plot - Secure vehicle parking support by Global Bank Recovery Agency.">
+<title>Bank Recovery Vehicle Parking | Global Bank Recovery Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#002b5c;
+  --navy-dark:#001c3d;
+  --gold:#c9972e;
+  --gold-light:#e3b84f;
+  --white:#fff;
+  --light:#f5f7fa;
+  --text:#1b2430;
+  --muted:#657080;
+  --border:#d9dee6;
+  --shadow:0 10px 28px rgba(0,43,92,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:var(--text);background:#fff;line-height:1.5;overflow-x:hidden}
+body[data-lang="hi"]{font-family:"Noto Sans Devanagari",Arial,sans-serif}
+body[data-lang="ta"]{font-family:"Noto Sans Tamil",Arial,sans-serif}
+body[data-lang="gu"]{font-family:"Noto Sans Gujarati",Arial,sans-serif}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1150px,92%);margin:auto}
+
+.language-selector{position:absolute;top:15px;right:20px;z-index:1000}
+.language-selector select{
+  background:#fff;color:var(--navy);border:2px solid var(--gold);
+  border-radius:8px;padding:7px 28px 7px 10px;font-weight:700;font-size:14px;cursor:pointer
+}
+
+.site-header{background:var(--navy);color:#fff;position:relative;padding:18px 0 22px;border-bottom:4px solid var(--gold)}
+.header-inner{width:min(1150px,92%);margin:auto;display:flex;align-items:center;gap:18px;padding-right:145px}
+.logo-wrap{width:100px;height:100px;flex:0 0 100px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;overflow:hidden;border:3px solid var(--gold)}
+.logo-wrap img{width:100%;height:100%;object-fit:contain}
+.brand{min-width:0}
+.brand h1{color:#fff;font-size:34px;line-height:1.05;font-weight:800;letter-spacing:1px}
+.brand h1 span{color:var(--gold-light)}
+.company-subtitle{color:#fff;margin-top:5px;font-size:15px;font-weight:700;letter-spacing:.4px}
+.header-contact{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:5px;font-size:14px;font-weight:700}
+.header-contact a:hover{color:var(--gold-light)}
+
+.navbar{background:#fff;border-bottom:1px solid var(--border);box-shadow:0 3px 10px rgba(0,0,0,.06);position:sticky;top:0;z-index:900}
+.nav-inner{width:min(1150px,92%);margin:auto;display:flex;justify-content:center;gap:8px;padding:9px 0;flex-wrap:wrap}
+.nav-inner a{color:var(--navy);font-weight:800;padding:8px 14px;border-radius:7px}
+.nav-inner a:hover,.nav-inner a.active{background:var(--navy);color:#fff}
+
+.hero{
+  background:radial-gradient(circle at 85% 20%,rgba(201,151,46,.18),transparent 28%),
+             linear-gradient(135deg,#001c3d 0%,#003d7c 60%,#002b5c 100%);
+  color:#fff;padding:70px 0 65px
+}
+.hero-inner{width:min(1050px,92%);margin:auto;text-align:center}
+.hero-icon{font-size:58px;margin-bottom:12px}
+.hero h2{font-size:46px;line-height:1.08;font-weight:900;margin-bottom:15px}
+.hero h2 span{color:var(--gold-light)}
+.hero p{font-size:18px;color:#eef4fb;max-width:800px;margin:0 auto}
+.hero-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border-radius:8px;font-weight:800;border:2px solid transparent}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-outline{border-color:#fff;color:#fff}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+
+section{padding:58px 0}
+.section-title{text-align:center;color:var(--navy);font-size:32px;font-weight:900;margin-bottom:8px}
+.section-title span{color:var(--gold)}
+.section-subtitle{text-align:center;color:var(--muted);max-width:760px;margin:0 auto 30px}
+
+.parking-grid{width:min(1050px,92%);margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.parking-card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--gold);border-radius:15px;padding:25px 20px;box-shadow:var(--shadow)}
+.parking-icon{width:56px;height:56px;margin-bottom:14px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px}
+.parking-card h3{color:var(--navy);font-size:19px;margin-bottom:6px}
+.parking-card p{color:var(--muted);font-size:14px}
+
+.notice{width:min(1000px,92%);margin:0 auto;background:var(--light);border-left:5px solid var(--gold);border-radius:10px;padding:20px;color:var(--text)}
+.notice strong{color:var(--navy)}
+
+.contact-section{background:#fff}
+.contact-box{width:min(850px,92%);margin:auto;border:1px solid var(--border);border-radius:15px;padding:28px;box-shadow:var(--shadow);text-align:center}
+.contact-box h3{color:var(--navy);font-size:24px;margin-bottom:10px}
+.contact-box p{color:var(--muted);margin-bottom:18px}
+.contact-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+
+footer{background:var(--navy-dark);color:#fff;text-align:center;padding:30px 15px 80px;border-top:4px solid var(--gold)}
+.footer-tagline{color:var(--gold-light);font-size:22px;font-weight:900}
+.footer-copy{margin-top:12px;color:#b9c4d2;font-size:13px}
+
+.floating-actions{position:fixed;right:18px;bottom:18px;z-index:2000;display:flex;flex-direction:column;gap:10px}
+.floating-btn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:21px;font-weight:900;box-shadow:0 8px 20px rgba(0,0,0,.25);border:2px solid #fff}
+.floating-email{background:#334e68}.floating-call{background:#075aaa}.floating-whatsapp{background:#168b45}
+
+@media(max-width:768px){
+  .language-selector{top:8px;right:8px}
+  .language-selector select{font-size:12px;padding:6px 22px 6px 7px;border-width:1px}
+  .site-header{padding:12px 0 14px}
+  .header-inner{width:94%;gap:9px;padding-right:100px}
+  .logo-wrap{width:50px;height:50px;flex-basis:50px;border-width:2px}
+  .brand h1{font-size:17px}
+  .company-subtitle{font-size:9px}
+  .header-contact{display:none}
+  .nav-inner{gap:2px}
+  .nav-inner a{padding:7px 9px;font-size:13px}
+  .hero{padding:48px 0}
+  .hero h2{font-size:31px}
+  .hero p{font-size:16px}
+  .parking-grid{grid-template-columns:1fr}
+  .floating-actions{right:10px;bottom:12px;gap:7px}
+  .floating-btn{width:43px;height:43px;font-size:17px}
+  footer{padding-bottom:75px}
+}
+@media(max-width:380px){
+  .header-inner{padding-right:92px}
+  .logo-wrap{width:45px;height:45px;flex-basis:45px}
+  .brand h1{font-size:15px}
+  .company-subtitle{font-size:8px}
+  .hero h2{font-size:27px}
+  .floating-btn{width:40px;height:40px;font-size:16px}
+}
+</style>
+</head>
+
+<body data-lang="en">
+
+<div class="language-selector">
+  <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Language">
+    <option value="en">English</option>
+    <option value="hi">हिन्दी</option>
+    <option value="ta">தமிழ்</option>
+    <option value="mr">मराठी</option>
+    <option value="gu">ગુજરાતી</option>
+  </select>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Global Bank Recovery Agency Logo">
+    </div>
+    <div class="brand">
+      <h1><span>GLOBAL</span> BANK RECOVERY AGENCY</h1>
+      <div class="company-subtitle" id="subtitle">PROFESSIONAL | TRUSTED | RESULT ORIENTED</div>
+    </div>
+    <div class="header-contact">
+      <a href="tel:8451817707">☎ 8451817707</a>
+      <a href="mailto:globalbankrecoveryagency26@gmail.com">✉ globalbankrecoveryagency26@gmail.com</a>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="vehicle-parking.html" class="active">Vehicle Parking</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-icon">🚗</div>
+    <h2 id="pageTitle">Bank Recovery <span>Vehicle Parking</span></h2>
+    <p id="heroText">Secure and organized parking support for bank-recovered and repossessed vehicles.</p>
+    <div class="hero-buttons">
+      <a class="btn btn-gold" href="tel:8451817707" id="callNow">Call Now</a>
+      <a class="btn btn-outline" href="https://wa.me/918451817707" target="_blank" rel="noopener" id="whatsapp">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title" id="servicesTitle">Vehicle Parking <span>Services</span></h2>
+  <p class="section-subtitle" id="servicesIntro">Professional support for secure handling and parking of recovery vehicles.</p>
+
+  <div class="parking-grid">
+    <article class="parking-card">
+      <div class="parking-icon">🅿️</div>
+      <h3 id="c1t">Secure Parking Plot</h3>
+      <p id="c1p">Dedicated parking space for recovered and repossessed vehicles with organized vehicle placement.</p>
+    </article>
+    <article class="parking-card">
+      <div class="parking-icon">🔐</div>
+      <h3 id="c2t">Safety &amp; Security</h3>
+      <p id="c2p">Controlled access and responsible vehicle handling to support secure parking operations.</p>
+    </article>
+    <article class="parking-card">
+      <div class="parking-icon">📋</div>
+      <h3 id="c3t">Vehicle Records</h3>
+      <p id="c3p">Basic parking and vehicle identification records for organized recovery operations.</p>
+    </article>
+  </div>
+</section>
+
+<section style="background:var(--light)">
+  <h2 class="section-title" id="supportTitle">Recovery Vehicle <span>Support</span></h2>
+  <p class="section-subtitle" id="supportIntro">Suitable for banks, NBFCs, financial institutions and authorized recovery operations.</p>
+  <div class="notice">
+    <strong id="noticeStrong">Professional coordination:</strong>
+    <span id="noticeText">Vehicle parking arrangements are subject to site availability, applicable permissions, documentation and agreed terms.</span>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="contact-box">
+    <h3 id="contactTitle">Enquire About Vehicle Parking</h3>
+    <p id="contactText">Contact Global Bank Recovery Agency for vehicle parking plot requirements and availability.</p>
+    <div class="contact-buttons">
+      <a class="btn btn-gold" href="tel:8451817707">☎ 8451817707</a>
+      <a class="btn btn-outline" style="background:var(--navy)" href="mailto:globalbankrecoveryagency26@gmail.com">✉ Email Us</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-tagline">YOUR RECOVERY, OUR RESPONSIBILITY</div>
+  <div class="footer-copy">© <span id="year"></span> Global Bank Recovery Agency. All Rights Reserved.</div>
+</footer>
+
+<div class="floating-actions" aria-label="Contact actions">
+  <a class="floating-btn floating-email" href="mailto:globalbankrecoveryagency26@gmail.com" aria-label="Email">✉</a>
+  <a class="floating-btn floating-call" href="tel:8451817707" aria-label="Call">☎</a>
+  <a class="floating-btn floating-whatsapp" href="https://wa.me/918451817707" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+</div>
+
+<script>
+const translations={
+en:{
+subtitle:"PROFESSIONAL | TRUSTED | RESULT ORIENTED",
+pageTitle:'Bank Recovery <span>Vehicle Parking</span>',
+heroText:"Secure and organized parking support for bank-recovered and repossessed vehicles.",
+callNow:"Call Now",whatsapp:"WhatsApp",
+servicesTitle:'Vehicle Parking <span>Services</span>',
+servicesIntro:"Professional support for secure handling and parking of recovery vehicles.",
+c1t:"Secure Parking Plot",c1p:"Dedicated parking space for recovered and repossessed vehicles with organized vehicle placement.",
+c2t:"Safety & Security",c2p:"Controlled access and responsible vehicle handling to support secure parking operations.",
+c3t:"Vehicle Records",c3p:"Basic parking and vehicle identification records for organized recovery operations.",
+supportTitle:'Recovery Vehicle <span>Support</span>',
+supportIntro:"Suitable for banks, NBFCs, financial institutions and authorized recovery operations.",
+noticeStrong:"Professional coordination:",noticeText:"Vehicle parking arrangements are subject to site availability, applicable permissions, documentation and agreed terms.",
+contactTitle:"Enquire About Vehicle Parking",contactText:"Contact Global Bank Recovery Agency for vehicle parking plot requirements and availability."
+},
+hi:{
+subtitle:"पेशेवर | विश्वसनीय | परिणाम केंद्रित",
+pageTitle:'बैंक रिकवरी <span>वाहन पार्किंग</span>',
+heroText:"बैंक द्वारा रिकवर और रीपोज़ किए गए वाहनों के लिए सुरक्षित और व्यवस्थित पार्किंग सहायता।",
+callNow:"कॉल करें",whatsapp:"व्हाट्सऐप",
+servicesTitle:'वाहन पार्किंग <span>सेवाएं</span>',servicesIntro:"रिकवरी वाहनों की सुरक्षित पार्किंग और व्यवस्था के लिए पेशेवर सहायता।",
+c1t:"सुरक्षित पार्किंग प्लॉट",c1p:"रिकवर और रीपोज़ किए गए वाहनों के लिए व्यवस्थित पार्किंग स्थान।",
+c2t:"सुरक्षा",c2p:"नियंत्रित प्रवेश और जिम्मेदार वाहन प्रबंधन।",
+c3t:"वाहन रिकॉर्ड",c3p:"व्यवस्थित रिकवरी संचालन के लिए बुनियादी पार्किंग और वाहन पहचान रिकॉर्ड।",
+supportTitle:'रिकवरी वाहन <span>सहायता</span>',supportIntro:"बैंकों, NBFCs, वित्तीय संस्थानों और अधिकृत रिकवरी कार्यों के लिए उपयुक्त।",
+noticeStrong:"पेशेवर समन्वय:",noticeText:"पार्किंग व्यवस्था स्थान की उपलब्धता, आवश्यक अनुमति, दस्तावेज़ और सहमत शर्तों के अधीन है।",
+contactTitle:"वाहन पार्किंग के लिए पूछताछ",contactText:"वाहन पार्किंग प्लॉट की आवश्यकता और उपलब्धता के लिए Global Bank Recovery Agency से संपर्क करें।"
+},
+mr:{
+subtitle:"प्रोफेशनल | विश्वासार्ह | परिणामाभिमुख",
+pageTitle:'बँक रिकव्हरी <span>वाहन पार्किंग</span>',
+heroText:"बँक रिकव्हरी व जप्त केलेल्या वाहनांसाठी सुरक्षित आणि व्यवस्थित पार्किंग सुविधा.",
+callNow:"कॉल करा",whatsapp:"WhatsApp",
+servicesTitle:'वाहन पार्किंग <span>सेवा</span>',servicesIntro:"रिकव्हरी वाहनांच्या सुरक्षित पार्किंग व व्यवस्थेसाठी व्यावसायिक सहाय्य.",
+c1t:"सुरक्षित पार्किंग प्लॉट",c1p:"रिकव्हर व जप्त केलेल्या वाहनांसाठी नियोजित पार्किंग जागा.",
+c2t:"सुरक्षा व संरक्षण",c2p:"नियंत्रित प्रवेश आणि जबाबदार वाहन व्यवस्थापन.",
+c3t:"वाहन नोंदी",c3p:"व्यवस्थित रिकव्हरी ऑपरेशनसाठी मूलभूत पार्किंग व वाहन ओळख नोंदी.",
+supportTitle:'रिकव्हरी वाहन <span>सहाय्य</span>',supportIntro:"बँका, NBFCs, वित्तीय संस्था आणि अधिकृत रिकव्हरी ऑपरेशन्ससाठी उपयुक्त.",
+noticeStrong:"व्यावसायिक समन्वय:",noticeText:"पार्किंग व्यवस्था जागेची उपलब्धता, लागू परवानग्या, कागदपत्रे आणि मान्य अटींच्या अधीन असेल.",
+contactTitle:"वाहन पार्किंगसाठी चौकशी",contactText:"वाहन पार्किंग प्लॉटची आवश्यकता व उपलब्धतेसाठी Global Bank Recovery Agency शी संपर्क साधा."
+},
+ta:{
+subtitle:"தொழில்முறை | நம்பகமான | முடிவுநோக்கு",
+pageTitle:'வங்கி மீட்பு <span>வாகன நிறுத்தம்</span>',
+heroText:"மீட்கப்பட்ட மற்றும் கைப்பற்றப்பட்ட வாகனங்களுக்கு பாதுகாப்பான, ஒழுங்கமைக்கப்பட்ட நிறுத்துமிட ஆதரவு.",
+callNow:"அழைக்கவும்",whatsapp:"WhatsApp",
+servicesTitle:'வாகன நிறுத்த <span>சேவைகள்</span>',servicesIntro:"மீட்பு வாகனங்களின் பாதுகாப்பான நிறுத்தம் மற்றும் நிர்வாகத்திற்கான தொழில்முறை ஆதரவு.",
+c1t:"பாதுகாப்பான நிறுத்துமிடம்",c1p:"மீட்கப்பட்ட வாகனங்களுக்கு ஒழுங்கமைக்கப்பட்ட நிறுத்துமிடம்.",
+c2t:"பாதுகாப்பு",c2p:"கட்டுப்படுத்தப்பட்ட அணுகல் மற்றும் பொறுப்பான வாகன கையாளுதல்.",
+c3t:"வாகன பதிவுகள்",c3p:"ஒழுங்கமைக்கப்பட்ட மீட்பு நடவடிக்கைகளுக்கான அடிப்படை வாகன பதிவுகள்.",
+supportTitle:'மீட்பு வாகன <span>ஆதரவு</span>',supportIntro:"வங்கிகள், NBFCs, நிதி நிறுவனங்கள் மற்றும் அங்கீகரிக்கப்பட்ட மீட்பு நடவடிக்கைகளுக்கு ஏற்றது.",
+noticeStrong:"தொழில்முறை ஒருங்கிணைப்பு:",noticeText:"நிறுத்துமிட ஏற்பாடுகள் இட வசதி, தேவையான அனுமதிகள், ஆவணங்கள் மற்றும் ஒப்புக்கொண்ட விதிமுறைகளுக்கு உட்பட்டவை.",
+contactTitle:"வாகன நிறுத்தம் குறித்து விசாரிக்க",contactText:"வாகன நிறுத்துமிட தேவைகள் மற்றும் கிடைப்பது குறித்து Global Bank Recovery Agency-ஐ தொடர்பு கொள்ளவும்."
+},
+gu:{
+subtitle:"વ્યાવસાયિક | વિશ્વસનીય | પરિણામલક્ષી",
+pageTitle:'બેંક રિકવરી <span>વાહન પાર્કિંગ</span>',
+heroText:"બેંક દ્વારા રિકવર અને રિપોઝ કરવામાં આવેલા વાહનો માટે સુરક્ષિત અને વ્યવસ્થિત પાર્કિંગ સહાય.",
+callNow:"કૉલ કરો",whatsapp:"WhatsApp",
+servicesTitle:'વાહન પાર્કિંગ <span>સેવાઓ</span>',servicesIntro:"રિકવરી વાહનોના સુરક્ષિત પાર્કિંગ અને વ્યવસ્થાપન માટે વ્યાવસાયિક સહાય.",
+c1t:"સુરક્ષિત પાર્કિંગ પ્લોટ",c1p:"રિકવર અને રિપોઝ કરવામાં આવેલા વાહનો માટે વ્યવસ્થિત પાર્કિંગ જગ્યા.",
+c2t:"સલામતી અને સુરક્ષા",c2p:"નિયંત્રિત પ્રવેશ અને જવાબદાર વાહન વ્યવસ્થાપન.",
+c3t:"વાહન રેકોર્ડ્સ",c3p:"વ્યવસ્થિત રિકવરી કામગીરી માટે મૂળભૂત પાર્કિંગ અને વાહન ઓળખ રેકોર્ડ્સ.",
+supportTitle:'રિકવરી વાહન <span>સહાય</span>',supportIntro:"બેંકો, NBFCs, નાણાકીય સંસ્થાઓ અને અધિકૃત રિકવરી કામગીરી માટે યોગ્ય.",
+noticeStrong:"વ્યાવસાયિક સમન્વય:",noticeText:"પાર્કિંગ વ્યવસ્થા સ્થળની ઉપલબ્ધતા, લાગુ પરવાનગીઓ, દસ્તાવેજો અને સંમત શરતોને આધિન છે.",
+contactTitle:"વાહન પાર્કિંગ માટે પૂછપરછ",contactText:"વાહન પાર્કિંગ પ્લોટની જરૂરિયાત અને ઉપલબ્ધતા માટે Global Bank Recovery Agencyનો સંપર્ક કરો."
+}};
+
+function changeLanguage(lang){
+  const t=translations[lang]||translations.en;
+  document.body.dataset.lang=lang;
+  document.getElementById("languageSelect").value=lang;
+  Object.keys(t).forEach(k=>{const el=document.getElementById(k);if(el)el.innerHTML=t[k]});
+  localStorage.setItem("gbraLanguage",lang);
+}
+document.getElementById("year").textContent=new Date().getFullYear();
+changeLanguage(localStorage.getItem("gbraLanguage")||"en");
+</script>
+</body>
+</html>
