@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Global Bank Recovery Agency - Professional, trusted and result-oriented recovery solutions for banks, financial institutions and businesses.">
+<meta name="robots" content="index, follow">
+<title>Global Bank Recovery Agency | Professional Recovery Services</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#002b5c;
+  --navy2:#061d3d;
+  --blue:#0758a0;
+  --gold:#8a6500;
+  --gold2:#e0ad39;
+  --white:#fff;
+  --light:#f5f7fa;
+  --text:#172438;
+  --muted:#667386;
+  --border:#d9e0e8;
+  --shadow:0 12px 35px rgba(0,32,75,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+body[data-lang="hi"]{font-family:"Noto Sans Devanagari",Arial,sans-serif}
+body[data-lang="ta"]{font-family:"Noto Sans Tamil",Arial,sans-serif}
+body[data-lang="gu"]{font-family:"Noto Sans Gujarati",Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+img{max-width:100%;display:block}
+
+.topbar{
+  background:var(--navy2);
+  color:#fff;
+  padding:8px 5%;
+  font-size:13px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+}
+.topbar a{color:#fff}
+.container{width:min(1180px,92%);margin:auto}
+
+.site-header{
+  background:var(--navy);
+  border-bottom:3px solid var(--gold);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 4px 15px rgba(0,0,0,.07);
+}
+.header-inner{
+  position:relative;
+  width:min(1180px,92%);
+  margin:auto;
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+.logo-wrap{width:60px;height:60px;flex:0 0 60px}
+.logo-wrap img{width:100%;height:100%;object-fit:contain}
+.brand{flex:1;padding-right:150px}
+.brand h1{
+  color:#fff;
+  font-size:22px;
+  line-height:1.1;
+  font-weight:800;
+}
+.brand h1 span{color:var(--gold)}
+.company-subtitle{
+  color:#dbe8f7;
+  font-size:12px;
+  letter-spacing:1.5px;
+  font-weight:700;
+  margin-top:3px;
+}
+.header-contact{text-align:right;font-size:13px;line-height:1.5}
+.header-contact a{display:block;color:#fff;font-weight:600}
+
+.language-selector{
+  position:absolute;
+  top:50%;
+  right:25%;
+  transform:translateY(-50%);
+  z-index:1100;
+}
+.language-selector select{
+  border:2px solid rgba(201,151,46,.55);
+  border-radius:10px;
+  padding:9px 30px 9px 10px;
+  background:#fff;
+  color:var(--navy);
+  font-weight:700;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.navbar{background:var(--navy)}
+.nav-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.nav-inner a{
+  color:#fff;
+  font-weight:700;
+  padding:12px 18px;
+  transition:.2s;
+}
+.nav-inner a:hover{background:rgba(255,255,255,.12);color:var(--gold2)}
+
+.professional-slider{
+  background:var(--light);
+  padding:18px 0 30px;
+}
+.slider-container{
+  width:min(1180px,92%);
+  margin:auto;
+  position:relative;
+}
+.slider-window{
+  overflow:hidden;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+}
+.slider-track{
+  display:flex;
+  transition:transform .55s ease;
+}
+.slider-slide{
+  min-width:100%;
+  min-height:470px;
+  position:relative;
+  overflow:hidden;
+  background:var(--navy);
+}
+.slider-image{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+}
+.slider-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,26,58,.96) 0%,rgba(0,43,92,.78) 48%,rgba(0,43,92,.35) 100%);
+}
+.slider-content{
+  position:relative;
+  z-index:2;
+  width:min(700px,80%);
+  padding:75px 55px;
+  color:#fff;
+}
+.slider-small-title{
+  color:var(--gold2);
+  font-weight:800;
+  letter-spacing:2px;
+  font-size:14px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.slider-content h2{
+  font-size:46px;
+  line-height:1.1;
+  margin-bottom:18px;
+}
+.slider-content h2 span{color:var(--gold2)}
+.slider-content p{font-size:20px;color:#eef5ff;margin-bottom:28px}
+.slider-btn{
+  display:inline-block;
+  background:var(--gold);
+  color:#fff;
+  padding:14px 26px;
+  border-radius:10px;
+  font-weight:800;
+  font-size:16px;
+}
+.slider-arrow{
+  position:absolute;
+  z-index:5;
+  top:50%;
+  transform:translateY(-50%);
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:3px solid #fff;
+  background:rgba(0,43,92,.55);
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
+}
+.slider-arrow.prev{left:16px}
+.slider-arrow.next{right:16px}
+.slider-dots{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:14px;
+}
+.slider-dot{
+  width:48px;height:48px;border-radius:50%;
+  border:0;background:transparent;cursor:pointer;
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+}
+.slider-dot::before{
+  content:"";
+  width:11px;height:11px;border-radius:50%;
+  background:#6f7d8d;
+}
+.slider-dot.active::before{background:var(--gold)}
+
+.hero{
+  background:linear-gradient(135deg,#002b5c,#064e8f);
+  color:#fff;
+  padding:70px 0;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:40px;
+  align-items:center;
+}
+.hero h2{font-size:48px;line-height:1.08;margin-bottom:18px}
+.hero h2 span{color:var(--gold2)}
+.hero p{font-size:20px;max-width:760px;color:#eaf3ff}
+.btn-row{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:10px;
+  font-weight:800;
+}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-outline{border:2px solid #fff;color:#fff}
+
+.section{padding:70px 0}
+.section.alt{background:var(--light)}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title .eyebrow{
+  color:var(--gold);
+  font-weight:800;
+  letter-spacing:2px;
+  font-size:13px;
+}
+.section-title h2{font-size:36px;color:var(--navy);margin:5px 0 8px}
+.section-title p{color:var(--muted);max-width:720px;margin:auto}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+.card h3{color:var(--navy);font-size:22px;margin-bottom:10px}
+.card h3 span{color:var(--gold)}
+.card p{color:var(--muted)}
+.card .icon{
+  width:52px;height:52px;border-radius:50%;
+  background:#edf4fb;color:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;margin-bottom:18px;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+.about-box{
+  background:var(--navy);
+  color:#fff;
+  border-radius:20px;
+  padding:35px;
+  box-shadow:var(--shadow);
+}
+.about-box h3{font-size:30px;color:var(--gold2);margin-bottom:15px}
+.check-list{list-style:none;margin-top:18px}
+.check-list li{margin:10px 0}
+.check-list li::before{content:"✓";color:var(--gold2);font-weight:900;margin-right:10px}
+
+.cta{
+  background:linear-gradient(135deg,var(--navy2),var(--blue));
+  color:#fff;
+  padding:55px 0;
+}
+.cta-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+}
+.cta h2{font-size:32px}
+.cta p{color:#dceaff}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+.contact-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:25px;
+  box-shadow:var(--shadow);
+}
+.contact-card h3{color:var(--navy);margin-bottom:10px}
+.contact-card a{color:var(--blue);font-weight:700}
+
+footer{
+  background:#061426;
+  color:#c9d3df;
+  padding:45px 0 20px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr;
+  gap:35px;
+}
+footer h3{color:#fff;margin-bottom:12px}
+footer a{display:block;margin:6px 0}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.15);
+  margin-top:30px;padding-top:18px;
+  text-align:center;font-size:13px;
+}
+
+.floating-buttons{
+  position:fixed;
+  right:10px;
+  top:50%;
+  bottom:auto;
+  transform:translateY(-50%);
+  z-index:3000;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.float-btn{
+  width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;border:2px solid #fff;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+  font-size:24px;
+}
+.float-email{background:#34495e}
+.float-call{background:#0758a0}
+.float-wa{background:#159447}
+
+@media(max-width:800px){
+  .topbar{justify-content:center;text-align:center}
+  .header-inner{min-height:72px;padding-right:100px}
+  .logo-wrap{width:48px;height:48px;flex-basis:48px}
+  .brand h1{font-size:16px}
+  .company-subtitle{font-size:9px}
+  .header-contact{display:none}
+  .language-selector{top:50%;right:3%;transform:translateY(-50%)}
+  .language-selector select{min-height:48px;padding:7px 25px 7px 10px;font-size:12px}
+  .nav-inner{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
+  .nav-inner a{font-size:14px;padding:12px 14px;min-height:48px;display:flex;align-items:center;white-space:nowrap}
+  .slider-slide{min-height:430px}
+  .slider-content{padding:60px 28px;width:88%}
+  .slider-content h2{font-size:34px}
+  .slider-content p{font-size:17px}
+  .slider-arrow{width:48px;height:48px;font-size:22px}
+  .slider-arrow.prev{left:10px}.slider-arrow.next{right:10px}
+  .hero{padding:50px 0}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero h2{font-size:36px}
+  .cards{grid-template-columns:1fr}
+  .section{padding:52px 0}
+  .section-title h2{font-size:30px}
+  .cta-inner{flex-direction:column;align-items:flex-start}
+  .footer-grid{grid-template-columns:1fr}
+  .floating-buttons{right:8px;top:50%;bottom:auto;transform:translateY(-50%)}
+  .float-btn{width:52px;height:52px;font-size:20px}
+}
+@media(max-width:380px){
+  .header-inner{padding-right:90px}
+  .slider-content{padding:52px 22px}
+  .slider-content h2{font-size:29px}
+  .slider-content p{font-size:15px}
+}
+
+@media(max-width:800px){
+  .nav-inner a{font-size:13px;padding:12px 12px;min-height:48px}
+  .section-title p{font-size:15px}
+  .card h3{font-size:20px}
+}
+</style>
+</head>
+
+<body data-lang="en">
+
+<div class="topbar">
+  <div data-i18n="topTag">Professional • Trusted • Result Oriented</div>
+  <div><a href="tel:+918451817707">☎ 8451817707</a> &nbsp; | &nbsp; <a href="mailto:globalbankrecoveryagency26@gmail.com">✉ Email</a></div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Global Bank Recovery Agency Logo" onerror="this.style.display='none'">
+    </div>
+    <div class="brand">
+      <h1><span>GLOBAL</span> BANK RECOVERY AGENCY</h1>
+      <div class="company-subtitle" data-i18n="subtitle">PROFESSIONAL | TRUSTED | RESULT ORIENTED</div>
+    </div>
+    <div class="header-contact">
+      <a href="tel:+918451817707">8451817707</a>
+      <a href="mailto:globalbankrecoveryagency26@gmail.com">globalbankrecoveryagency26@gmail.com</a>
+    </div>
+    <div class="language-selector">
+      <select id="languageSelect" aria-label="Language">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ta">தமிழ்</option>
+        <option value="mr">मराठी</option>
+        <option value="gu">ગુજરાતી</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#home" data-i18n="navHome">Home</a>
+    <a href="#about" data-i18n="navAbout">About Us</a>
+    <a href="#services" data-i18n="navServices">Services</a>
+    <a href="#vehicle-parking" data-i18n="navVehicle">Vehicle Parking Plot</a>
+    <a href="#company-documents" data-i18n="navDocuments">Company Registration Documents</a>
+    <a href="#gallery" data-i18n="navGallery">Gallery</a>
+    <a href="#contact" data-i18n="navContact">Contact Us</a>
+  </div>
+</nav>
+
+<!-- PROFESSIONAL TOP SLIDER -->
+<section class="professional-slider" aria-label="Professional services slider">
+  <div class="slider-container">
+    <div class="slider-window">
+      <div class="slider-track" id="sliderTrack">
+
+        <article class="slider-slide">
+          <div class="slider-image" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="slider-content">
+            <div class="slider-small-title" data-i18n="s1small">Professional Bank Recovery Services</div>
+            <h2 data-i18n="s1title">Professional <span>Bank Recovery Services</span></h2>
+            <p data-i18n="s1desc">Reliable, professional and systematic recovery support for banks and financial institutions.</p>
+            <a href="#services" class="slider-btn" data-i18n="viewServices">Explore Services →</a>
+          </div>
+        </article>
+
+        <article class="slider-slide">
+          <div class="slider-image" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="slider-content">
+            <div class="slider-small-title" data-i18n="s2small">Reliable Recovery Solutions</div>
+            <h2 data-i18n="s2title">Reliable &amp; <span>Professional Solutions</span></h2>
+            <p data-i18n="s2desc">Responsible communication, field support and effective recovery coordination.</p>
+            <a href="#about" class="slider-btn" data-i18n="learnMore">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="slider-slide">
+          <div class="slider-image" style="background-image:url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="slider-content">
+            <div class="slider-small-title" data-i18n="s3small">Documentation &amp; Recovery Support</div>
+            <h2 data-i18n="s3title">Documentation &amp; <span>Recovery Support</span></h2>
+            <p data-i18n="s3desc">Organized support for recovery-related documentation and field coordination.</p>
+            <a href="#services" class="slider-btn" data-i18n="viewServices">Our Services →</a>
+          </div>
+        </article>
+
+        <article class="slider-slide">
+          <div class="slider-image" style="background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="slider-content">
+            <div class="slider-small-title" data-i18n="s4small">Corporate &amp; Institutional Services</div>
+            <h2 data-i18n="s4title">Corporate &amp; <span>Institutional Recovery</span></h2>
+            <p data-i18n="s4desc">Professional support for banks, financial institutions and corporate requirements.</p>
+            <a href="#contact" class="slider-btn" data-i18n="getStarted">Get Started →</a>
+          </div>
+        </article>
+
+        <article class="slider-slide">
+          <div class="slider-image" style="background-image:url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="slider-content">
+            <div class="slider-small-title" data-i18n="s5small">Vehicle Parking Plot</div>
+            <h2 data-i18n="s5title">Vehicle <span>Parking Plot</span></h2>
+            <p data-i18n="s5desc">Convenient vehicle parking space suitable for organized parking requirements.</p>
+            <a href="#vehicle-parking" class="slider-btn" data-i18n="viewParking">View Parking Plot →</a>
+          </div>
+        </article>
+
+        <article class="slider-slide">
+          <div class="slider-image" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80')"></div>
+          <div class="slider-content">
+            <div class="slider-small-title" data-i18n="s6small">Global Bank Recovery Agency</div>
+            <h2 data-i18n="s6title">Contact <span>Our Team</span></h2>
+            <p data-i18n="s6desc">Connect with our team for professional recovery and service-related enquiries.</p>
+            <a href="#contact" class="slider-btn" data-i18n="contactUs">Contact Us →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+    <button class="slider-arrow prev" id="prevSlide" aria-label="Previous">‹</button>
+    <button class="slider-arrow next" id="nextSlide" aria-label="Next">›</button>
+    <div class="slider-dots" id="sliderDots"></div>
+  </div>
+</section>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h2 data-i18n="heroTitle">YOUR RECOVERY,<br><span>OUR RESPONSIBILITY</span></h2>
+      <p data-i18n="heroDesc">Professional, trusted and result-oriented recovery solutions for banks, financial institutions and businesses.</p>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="#services" data-i18n="viewServices">View Services</a>
+        <a class="btn btn-outline" href="tel:+918451817707" data-i18n="callNow">Call Now</a>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow" data-i18n="servicesEyebrow">OUR SERVICES</div>
+      <h2 data-i18n="servicesTitle">Professional Recovery Services</h2>
+      <p data-i18n="servicesDesc">Reliable field, vehicle and financial recovery support with a professional approach.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">⌕</div>
+        <h3 data-i18n="card1Title">Bank <span>Recovery Support</span></h3>
+        <p data-i18n="card1Desc">Professional support for bank and financial recovery assignments.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3 data-i18n="card2Title">Field Recovery <span>Assistance</span></h3>
+        <p data-i18n="card2Desc">Field support, verification, tracing and recovery coordination.</p>
+      </div>
+      <div class="card">
+        <div class="icon">☎</div>
+        <h3 data-i18n="card3Title">Tele Calling <span>Support</span></h3>
+        <p data-i18n="card3Desc">Professional tele calling support for customer communication and recovery follow-up.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3 data-i18n="card4Title">Customer Communication <span>&amp; Coordination</span></h3>
+        <p data-i18n="card4Desc">Responsible customer communication and effective coordination support.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3 data-i18n="card5Title">Documentation <span>Support</span></h3>
+        <p data-i18n="card5Desc">Organized recovery documentation, case updates and reporting support.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔄</div>
+        <h3 data-i18n="card6Title">Recovery <span>Follow-up</span></h3>
+        <p data-i18n="card6Desc">Structured follow-up support for recovery assignments and client coordination.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏢</div>
+        <h3 data-i18n="card7Title">Corporate &amp; Institutional <span>Support</span></h3>
+        <p data-i18n="card7Desc">Professional support designed for institutional and corporate recovery requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="section-title" style="text-align:left;margin-bottom:20px">
+        <div class="eyebrow" data-i18n="aboutEyebrow">ABOUT US</div>
+        <h2 data-i18n="aboutTitle">Professional. Trusted. Responsible.</h2>
+      </div>
+      <p data-i18n="aboutDesc">Global Bank Recovery Agency provides professional recovery and field support services with an emphasis on responsible operations, accurate reporting and client coordination.</p>
+      <ul class="check-list">
+        <li data-i18n="check1">Professional field operations</li>
+        <li data-i18n="check2">Transparent reporting</li>
+        <li data-i18n="check3">Client-focused coordination</li>
+        <li data-i18n="check4">Result-oriented service</li>
+      </ul>
+    </div>
+    <div class="about-box">
+      <h3 data-i18n="missionTitle">Our Commitment</h3>
+      <p data-i18n="missionDesc">Every assignment is handled with professionalism, responsibility and a clear focus on the client's requirements.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section alt" id="vehicle-parking">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow" data-i18n="vehicleEyebrow">VEHICLE PARKING PLOT</div>
+      <h2 data-i18n="vehicleTitle">Secure Vehicle Parking & Yard Support</h2>
+      <p data-i18n="vehicleDesc">Professional parking and yard support for recovered vehicles with proper coordination, records and reporting.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-box">
+        <h3 data-i18n="vehicleCommitment">Vehicle Parking Facility</h3>
+        <p data-i18n="vehicleCommitmentDesc">A dedicated solution for safe and organised parking of recovered vehicles, subject to site availability and applicable requirements.</p>
+        <ul class="check-list">
+          <li data-i18n="vehicleCheck1">Secure and organised vehicle parking</li>
+          <li data-i18n="vehicleCheck2">Vehicle entry and movement coordination</li>
+          <li data-i18n="vehicleCheck3">Parking records and status updates</li>
+          <li data-i18n="vehicleCheck4">Recovery-related documentation support</li>
+          <li data-i18n="vehicleCheck5">Professional client communication</li>
+        </ul>
+      </div>
+
+      <div class="card" style="min-height:100%">
+        <div class="icon">🚗</div>
+        <h3 data-i18n="vehicleCardTitle">Vehicle <span>Parking Plot</span></h3>
+        <p data-i18n="vehicleCardDesc">For vehicle parking plot enquiries, availability and coordination, contact Global Bank Recovery Agency directly.</p>
+        <div class="btn-row">
+          <a class="btn btn-gold" href="tel:+918451817707" data-i18n="vehicleCall">Call Now</a>
+          <a class="btn" style="border:2px solid var(--navy);color:var(--navy)" href="mailto:globalbankrecoveryagency26@gmail.com" data-i18n="vehicleEmail">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="company-documents">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow" data-i18n="documentsEyebrow">COMPANY REGISTRATION DOCUMENTS</div>
+      <h2 data-i18n="documentsTitle">Company Registration Documents</h2>
+      <p data-i18n="documentsDesc">Official company certificates and registration documents.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3 data-i18n="doc1Title">GUMASTA <span>Licence</span></h3>
+        <p data-i18n="doc1Desc">GUMASTA licence and related business registration document.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏢</div>
+        <h3 data-i18n="doc2Title">UDYAM <span>AADHAR</span></h3>
+        <p data-i18n="doc2Desc">Udyam registration document.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📜</div>
+        <h3 data-i18n="doc3Title">ISO <span>Certificate</span></h3>
+        <p data-i18n="doc3Desc">ISO certification document.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow" data-i18n="galleryEyebrow">OUR GALLERY</div>
+      <h2 data-i18n="galleryTitle">Our Gallery</h2>
+      <p data-i18n="galleryDesc">Office, service and vehicle parking plot visuals can be added here.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="icon">🏢</div><h3 data-i18n="galleryOffice">Office Photos</h3><p data-i18n="galleryOfficeDesc">Office and agency photographs.</p></div>
+      <div class="card"><div class="icon">🚗</div><h3 data-i18n="galleryParking">Vehicle Parking Plot</h3><p data-i18n="galleryParkingDesc">Vehicle parking plot photographs.</p></div>
+      <div class="card"><div class="icon">📜</div><h3 data-i18n="galleryDocs">Company Documents</h3><p data-i18n="galleryDocsDesc">Company certificate visuals can be displayed here.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <div>
+      <h2 data-i18n="ctaTitle">Need Professional Recovery Support?</h2>
+      <p data-i18n="ctaDesc">Contact Global Bank Recovery Agency for service information and coordination.</p>
+    </div>
+    <a class="btn btn-gold" href="#contact" data-i18n="contactUs">Contact Us</a>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow" data-i18n="contactEyebrow">GET IN TOUCH</div>
+      <h2 data-i18n="contactTitle">Contact Global Bank Recovery Agency</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3 data-i18n="officeTitle">Office</h3>
+        <p>3, Anthony Chawl, Ketkipada,<br>Dahisar East, Mumbai - 400068</p>
+      </div>
+      <div class="contact-card">
+        <h3 data-i18n="contactDetails">Contact Details</h3>
+        <p><a href="tel:+918451817707">8451817707</a></p>
+        <p><a href="mailto:globalbankrecoveryagency26@gmail.com">globalbankrecoveryagency26@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h3>Global Bank Recovery Agency</h3>
+      <p data-i18n="footerDesc">Professional, trusted and result-oriented recovery solutions.</p>
+    </div>
+    <div>
+      <h3 data-i18n="quickLinks">Quick Links</h3>
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#about" data-i18n="navAbout">About Us</a>
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="#vehicle-parking" data-i18n="navVehicle">Vehicle Parking Plot</a>
+      <a href="#company-documents" data-i18n="navDocuments">Company Registration Documents</a>
+      <a href="#gallery" data-i18n="navGallery">Gallery</a>
+      <a href="#contact" data-i18n="navContact">Contact Us</a>
+    </div>
+    <div>
+      <h3 data-i18n="footerContact">Contact</h3>
+      <p>8451817707</p>
+      <p>globalbankrecoveryagency26@gmail.com</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    © <span id="year"></span> Global Bank Recovery Agency. <span data-i18n="rights">All Rights Reserved.</span>
+  </div>
+</footer>
+
+<div class="floating-buttons">
+  <a class="float-btn float-email" href="mailto:globalbankrecoveryagency26@gmail.com" aria-label="Email">✉</a>
+  <a class="float-btn float-call" href="tel:+918451817707" aria-label="Call">☎</a>
+  <a class="float-btn float-wa" href="https://wa.me/918451817707" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+</div>
+
+<script>
+const translations = {
+en:{
+topTag:"Professional • Trusted • Result Oriented",subtitle:"PROFESSIONAL | TRUSTED | RESULT ORIENTED",
+navHome:"Home",navServices:"Services",navVehicle:"Vehicle Parking Plot",navDocuments:"Company Registration Documents",navGallery:"Gallery",navAbout:"About Us",navContact:"Contact Us",
+s1small:"Professional Bank Recovery Services",s1title:"Professional <span>Bank Recovery Services</span>",s1desc:"Reliable, professional and systematic recovery support for banks and financial institutions.",
+s2small:"Reliable Recovery Solutions",s2title:"Reliable &amp; <span>Professional Solutions</span>",s2desc:"Responsible communication, field support and effective recovery coordination.",
+s3small:"Documentation &amp; Recovery Support",s3title:"Documentation &amp; <span>Recovery Support</span>",s3desc:"Organized support for recovery-related documentation and field coordination.",
+s4small:"Corporate &amp; Institutional Services",s4title:"Corporate &amp; <span>Institutional Recovery</span>",s4desc:"Professional support for banks, financial institutions and corporate requirements.",
+s5small:"Vehicle Parking Plot",s5title:"Vehicle <span>Parking Plot</span>",s5desc:"Convenient vehicle parking space suitable for organized parking requirements.",
+s6small:"Global Bank Recovery Agency",s6title:"Contact <span>Our Team</span>",s6desc:"Connect with our team for professional recovery and service-related enquiries.",
+viewServices:"Explore Services →",learnMore:"Learn More →",getStarted:"Get Started →",viewParking:"View Parking Plot →",contactUs:"Contact Us →",callNow:"Call Now",
+heroTitle:"YOUR RECOVERY,<br><span>OUR RESPONSIBILITY</span>",heroDesc:"Professional, trusted and result-oriented recovery solutions for banks, financial institutions and businesses.",
+servicesEyebrow:"OUR SERVICES",servicesTitle:"Professional Recovery Services",servicesDesc:"Reliable recovery support with a professional approach.",
+card1Title:"Bank <span>Recovery Support</span>",card1Desc:"Professional support for bank and financial recovery assignments.",
+card2Title:"Field Recovery <span>Assistance</span>",card2Desc:"Field support, verification, tracing and recovery coordination.",
+card3Title:"Tele Calling <span>Support</span>",card3Desc:"Professional tele calling support for customer communication and recovery follow-up.",
+card4Title:"Customer Communication <span>&amp; Coordination</span>",card4Desc:"Responsible customer communication and effective coordination support.",
+card5Title:"Documentation <span>Support</span>",card5Desc:"Organized recovery documentation, case updates and reporting support.",
+card6Title:"Recovery <span>Follow-up</span>",card6Desc:"Structured follow-up support for recovery assignments and client coordination.",
+card7Title:"Corporate &amp; Institutional <span>Support</span>",card7Desc:"Professional support designed for institutional and corporate recovery requirements.",
+aboutEyebrow:"ABOUT US",aboutTitle:"Professional. Trusted. Responsible.",aboutDesc:"Global Bank Recovery Agency provides professional recovery support and field coordination services with an emphasis on responsible operations, accurate reporting and client coordination.",
+check1:"Professional field operations",check2:"Transparent reporting",check3:"Client-focused coordination",check4:"Result-oriented service",missionTitle:"Our Commitment",missionDesc:"Every assignment is handled with professionalism, responsibility and a clear focus on the client's requirements.",
+vehicleEyebrow:"VEHICLE PARKING PLOT",vehicleTitle:"Vehicle Parking Plot",vehicleDesc:"A dedicated parking plot for organized vehicle parking requirements. Contact us for availability, location details and further information.",
+vehicleCommitment:"Vehicle Parking Facility",vehicleCommitmentDesc:"A dedicated solution for safe and organised vehicle parking, subject to site availability and applicable requirements.",
+vehicleCheck1:"Convenient vehicle parking",vehicleCheck2:"Organised vehicle parking",vehicleCheck3:"Parking coordination and status updates",vehicleCheck4:"Recovery-related documentation support",vehicleCheck5:"Professional client communication",
+vehicleCardTitle:"Vehicle <span>Parking Plot</span>",vehicleCardDesc:"For vehicle parking plot enquiries, availability and coordination, contact Global Bank Recovery Agency directly.",vehicleCall:"Call Now",vehicleEmail:"Email Us",
+documentsEyebrow:"COMPANY REGISTRATION DOCUMENTS",documentsTitle:"Company Registration Documents",documentsDesc:"Official company certificates and registration documents.",
+doc1Title:"GUMASTA <span>Licence</span>",doc1Desc:"GUMASTA licence and related business registration document.",
+doc2Title:"UDYAM <span>AADHAR</span>",doc2Desc:"Udyam registration document.",
+doc3Title:"ISO <span>Certificate</span>",doc3Desc:"ISO certification document.",
+galleryEyebrow:"OUR GALLERY",galleryTitle:"Our Gallery",galleryDesc:"Office, service and vehicle parking plot visuals can be added here.",
+galleryOffice:"Office Photos",galleryOfficeDesc:"Office and agency photographs.",galleryParking:"Vehicle Parking Plot",galleryParkingDesc:"Vehicle parking plot photographs.",galleryDocs:"Company Documents",galleryDocsDesc:"Company certificate visuals can be displayed here.",
+ctaTitle:"Need Professional Recovery Support?",ctaDesc:"Contact Global Bank Recovery Agency for service information and coordination.",
+contactEyebrow:"GET IN TOUCH",contactTitle:"Contact Global Bank Recovery Agency",officeTitle:"Office",contactDetails:"Contact Details",
+footerDesc:"Professional, trusted and result-oriented recovery solutions.",quickLinks:"Quick Links",footerContact:"Contact",rights:"All Rights Reserved."
+},
+hi:{
+topTag:"प्रोफेशनल • विश्वसनीय • परिणाम उन्मुख",subtitle:"प्रोफेशनल | विश्वसनीय | परिणाम उन्मुख",
+navHome:"होम",navServices:"सेवाएं",navVehicle:"वाहन पार्किंग प्लॉट",navDocuments:"कंपनी पंजीकरण दस्तावेज़",navGallery:"गैलरी",navAbout:"हमारे बारे में",navContact:"संपर्क करें",
+s1small:"पेशेवर बैंक रिकवरी सेवाएं",s1title:"पेशेवर <span>बैंक रिकवरी सेवाएं</span>",s1desc:"बैंकों और वित्तीय संस्थानों के लिए विश्वसनीय, पेशेवर और व्यवस्थित रिकवरी सहायता।",
+s2small:"विश्वसनीय रिकवरी समाधान",s2title:"विश्वसनीय और <span>पेशेवर समाधान</span>",s2desc:"जिम्मेदार संवाद, फील्ड सहायता और प्रभावी रिकवरी समन्वय।",
+s3small:"दस्तावेज़ीकरण और रिकवरी सहायता",s3title:"दस्तावेज़ीकरण और <span>रिकवरी सहायता</span>",s3desc:"रिकवरी संबंधी दस्तावेज़ीकरण और फील्ड समन्वय के लिए व्यवस्थित सहायता।",
+s4small:"कॉर्पोरेट और संस्थागत सेवाएं",s4title:"कॉर्पोरेट और <span>संस्थागत रिकवरी</span>",s4desc:"बैंकों, वित्तीय संस्थानों और कॉर्पोरेट आवश्यकताओं के लिए पेशेवर सहायता।",
+s5small:"वाहन पार्किंग प्लॉट",s5title:"वाहन <span>पार्किंग प्लॉट</span>",s5desc:"व्यवस्थित पार्किंग आवश्यकताओं के लिए सुविधाजनक वाहन पार्किंग स्थान।",
+s6small:"ग्लोबल बैंक रिकवरी एजेंसी",s6title:"हमारी <span>टीम से संपर्क करें</span>",s6desc:"पेशेवर रिकवरी और सेवा संबंधी जानकारी के लिए हमारी टीम से संपर्क करें।",
+viewServices:"सेवाएं देखें →",learnMore:"अधिक जानें →",getStarted:"शुरुआत करें →",viewParking:"पार्किंग प्लॉट देखें →",contactUs:"संपर्क करें →",callNow:"अभी कॉल करें",
+heroTitle:"आपकी रिकवरी,<br><span>हमारी जिम्मेदारी</span>",heroDesc:"बैंकों, वित्तीय संस्थानों और व्यवसायों के लिए पेशेवर, विश्वसनीय और परिणाम उन्मुख रिकवरी समाधान।",
+servicesEyebrow:"हमारी सेवाएं",servicesTitle:"पेशेवर रिकवरी सेवाएं",servicesDesc:"पेशेवर तरीके से विश्वसनीय रिकवरी सहायता।",
+card1Title:"बैंक <span>रिकवरी सहायता</span>",card1Desc:"बैंक और वित्तीय रिकवरी कार्यों के लिए पेशेवर सहायता।",card2Title:"फील्ड रिकवरी <span>सहायता</span>",card2Desc:"फील्ड सहायता, सत्यापन, ट्रेसिंग और रिकवरी समन्वय।",card3Title:"टेली कॉलिंग <span>सहायता</span>",card3Desc:"ग्राहक संवाद और रिकवरी फॉलो-अप के लिए टेली कॉलिंग सहायता।",card4Title:"ग्राहक संवाद <span>और समन्वय</span>",card4Desc:"जिम्मेदार ग्राहक संवाद और प्रभावी समन्वय सहायता।",card5Title:"दस्तावेज़ीकरण <span>सहायता</span>",card5Desc:"व्यवस्थित रिकवरी दस्तावेज़, केस अपडेट और रिपोर्टिंग सहायता।",card6Title:"रिकवरी <span>फॉलो-अप</span>",card6Desc:"रिकवरी कार्यों और ग्राहक समन्वय के लिए संरचित फॉलो-अप।",card7Title:"कॉर्पोरेट और संस्थागत <span>सहायता</span>",card7Desc:"संस्थागत और कॉर्पोरेट रिकवरी आवश्यकताओं के लिए पेशेवर सहायता।",
+aboutEyebrow:"हमारे बारे में",aboutTitle:"पेशेवर। विश्वसनीय। जिम्मेदार।",aboutDesc:"Global Bank Recovery Agency जिम्मेदार संचालन, सटीक रिपोर्टिंग और ग्राहक समन्वय पर ध्यान देते हुए पेशेवर रिकवरी सहायता और फील्ड समन्वय सेवाएं प्रदान करती है।",check1:"पेशेवर फील्ड संचालन",check2:"पारदर्शी रिपोर्टिंग",check3:"ग्राहक-केंद्रित समन्वय",check4:"परिणाम उन्मुख सेवा",missionTitle:"हमारी प्रतिबद्धता",missionDesc:"हर कार्य को पेशेवर तरीके, जिम्मेदारी और ग्राहक की आवश्यकताओं पर स्पष्ट ध्यान के साथ संभाला जाता है।",
+vehicleEyebrow:"वाहन पार्किंग प्लॉट",vehicleTitle:"वाहन पार्किंग प्लॉट",vehicleDesc:"व्यवस्थित वाहन पार्किंग की आवश्यकताओं के लिए समर्पित पार्किंग प्लॉट। उपलब्धता, स्थान और अधिक जानकारी के लिए संपर्क करें।",vehicleCommitment:"वाहन पार्किंग सुविधा",vehicleCommitmentDesc:"सुरक्षित और व्यवस्थित वाहन पार्किंग के लिए समर्पित समाधान।",vehicleCheck1:"सुविधाजनक वाहन पार्किंग",vehicleCheck2:"व्यवस्थित वाहन पार्किंग",vehicleCheck3:"पार्किंग समन्वय और स्टेटस अपडेट",vehicleCheck4:"रिकवरी संबंधी दस्तावेज़ सहायता",vehicleCheck5:"पेशेवर ग्राहक संवाद",vehicleCardTitle:"वाहन <span>पार्किंग प्लॉट</span>",vehicleCardDesc:"पार्किंग प्लॉट की जानकारी और समन्वय के लिए Global Bank Recovery Agency से संपर्क करें।",vehicleCall:"अभी कॉल करें",vehicleEmail:"ईमेल करें",
+documentsEyebrow:"कंपनी पंजीकरण दस्तावेज़",documentsTitle:"कंपनी पंजीकरण दस्तावेज़",documentsDesc:"कंपनी के आधिकारिक प्रमाणपत्र और पंजीकरण दस्तावेज़।",doc1Title:"GUMASTA <span>Licence</span>",doc1Desc:"GUMASTA लाइसेंस और संबंधित व्यवसाय पंजीकरण दस्तावेज़।",doc2Title:"UDYAM <span>AADHAR</span>",doc2Desc:"उद्यम पंजीकरण दस्तावेज़।",doc3Title:"ISO <span>Certificate</span>",doc3Desc:"ISO प्रमाणन दस्तावेज़।",
+galleryEyebrow:"हमारी गैलरी",galleryTitle:"हमारी गैलरी",galleryDesc:"ऑफिस, सेवाओं और वाहन पार्किंग प्लॉट के फोटो यहां जोड़े जा सकते हैं।",galleryOffice:"ऑफिस फोटो",galleryOfficeDesc:"ऑफिस और एजेंसी के फोटो।",galleryParking:"वाहन पार्किंग प्लॉट",galleryParkingDesc:"वाहन पार्किंग प्लॉट के फोटो।",galleryDocs:"कंपनी दस्तावेज़",galleryDocsDesc:"कंपनी प्रमाणपत्रों के फोटो यहां दिखाए जा सकते हैं।",
+ctaTitle:"पेशेवर रिकवरी सहायता चाहिए?",ctaDesc:"सेवा जानकारी और समन्वय के लिए Global Bank Recovery Agency से संपर्क करें।",contactEyebrow:"संपर्क करें",contactTitle:"Global Bank Recovery Agency से संपर्क करें",officeTitle:"कार्यालय",contactDetails:"संपर्क विवरण",footerDesc:"पेशेवर, विश्वसनीय और परिणाम उन्मुख रिकवरी समाधान।",quickLinks:"त्वरित लिंक",footerContact:"संपर्क",rights:"सर्वाधिकार सुरक्षित।"
+},
+mr:{
+topTag:"प्रोफेशनल • विश्वासार्ह • परिणामाभिमुख",subtitle:"प्रोफेशनल | विश्वासार्ह | परिणामाभिमुख",
+navHome:"मुख्यपृष्ठ",navServices:"सेवा",navVehicle:"वाहन पार्किंग प्लॉट",navDocuments:"कंपनी नोंदणी कागदपत्रे",navGallery:"गॅलरी",navAbout:"आमच्याबद्दल",navContact:"संपर्क करा",
+s1small:"व्यावसायिक बँक रिकव्हरी सेवा",s1title:"व्यावसायिक <span>बँक रिकव्हरी सेवा</span>",s1desc:"बँका आणि वित्तीय संस्थांसाठी विश्वासार्ह, व्यावसायिक आणि नियोजनबद्ध रिकव्हरी सहाय्य।",
+s2small:"विश्वासार्ह रिकव्हरी सोल्युशन्स",s2title:"विश्वासार्ह आणि <span>व्यावसायिक सोल्युशन्स</span>",s2desc:"जबाबदार संवाद, फील्ड सपोर्ट आणि प्रभावी रिकव्हरी समन्वय।",
+s3small:"दस्तऐवजीकरण आणि रिकव्हरी सहाय्य",s3title:"दस्तऐवजीकरण आणि <span>रिकव्हरी सहाय्य</span>",s3desc:"रिकव्हरीशी संबंधित दस्तऐवजीकरण आणि फील्ड समन्वयासाठी व्यवस्थित सहाय्य।",
+s4small:"कॉर्पोरेट आणि संस्थात्मक सेवा",s4title:"कॉर्पोरेट आणि <span>संस्थात्मक रिकव्हरी</span>",s4desc:"बँका, वित्तीय संस्था आणि कॉर्पोरेट गरजांसाठी व्यावसायिक सहाय्य।",
+s5small:"वाहन पार्किंग प्लॉट",s5title:"वाहन <span>पार्किंग प्लॉट</span>",s5desc:"व्यवस्थित पार्किंगच्या गरजांसाठी सोयीची वाहन पार्किंग जागा।",
+s6small:"ग्लोबल बँक रिकव्हरी एजन्सी",s6title:"आमच्या <span>टीमशी संपर्क करा</span>",s6desc:"व्यावसायिक रिकव्हरी आणि सेवेसंबंधी माहितीसाठी आमच्या टीमशी संपर्क साधा।",
+viewServices:"सेवा पहा →",learnMore:"अधिक जाणून घ्या →",getStarted:"सुरुवात करा →",viewParking:"पार्किंग प्लॉट पहा →",contactUs:"संपर्क करा →",callNow:"आता कॉल करा",
+heroTitle:"तुमची रिकव्हरी,<br><span>आमची जबाबदारी</span>",heroDesc:"बँका, वित्तीय संस्था आणि व्यवसायांसाठी व्यावसायिक, विश्वासार्ह आणि परिणामाभिमुख रिकव्हरी सोल्युशन्स.",
+servicesEyebrow:"आमच्या सेवा",servicesTitle:"प्रोफेशनल रिकव्हरी सेवा",servicesDesc:"प्रोफेशनल पद्धतीने विश्वासार्ह रिकव्हरी सहाय्य.",
+card1Title:"बँक <span>रिकव्हरी सहाय्य</span>",card1Desc:"बँक आणि वित्तीय रिकव्हरी कामांसाठी व्यावसायिक सहाय्य।",card2Title:"फील्ड रिकव्हरी <span>सहाय्य</span>",card2Desc:"फील्ड सपोर्ट, पडताळणी, ट्रेसिंग आणि रिकव्हरी समन्वय।",card3Title:"टेली कॉलिंग <span>सहाय्य</span>",card3Desc:"ग्राहक संवाद आणि रिकव्हरी फॉलो-अपसाठी टेली कॉलिंग सहाय्य।",card4Title:"ग्राहक संवाद <span>व समन्वय</span>",card4Desc:"जबाबदार ग्राहक संवाद आणि प्रभावी समन्वय सहाय्य।",card5Title:"दस्तऐवजीकरण <span>सहाय्य</span>",card5Desc:"व्यवस्थित रिकव्हरी दस्तऐवज, केस अपडेट्स आणि रिपोर्टिंग सहाय्य।",card6Title:"रिकव्हरी <span>फॉलो-अप</span>",card6Desc:"रिकव्हरी कामे आणि क्लायंट समन्वयासाठी संरचित फॉलो-अप।",card7Title:"कॉर्पोरेट व संस्थात्मक <span>सहाय्य</span>",card7Desc:"संस्थात्मक आणि कॉर्पोरेट रिकव्हरी गरजांसाठी व्यावसायिक सहाय्य।",
+aboutEyebrow:"आमच्याबद्दल",aboutTitle:"प्रोफेशनल. विश्वासार्ह. जबाबदार.",aboutDesc:"Global Bank Recovery Agency जबाबदार कामकाज, अचूक रिपोर्टिंग आणि क्लायंट समन्वयावर भर देऊन व्यावसायिक रिकव्हरी सहाय्य आणि फील्ड समन्वय सेवा देते.",check1:"प्रोफेशनल फील्ड ऑपरेशन्स",check2:"पारदर्शक रिपोर्टिंग",check3:"क्लायंट-केंद्रित समन्वय",check4:"परिणामाभिमुख सेवा",missionTitle:"आमची बांधिलकी",missionDesc:"प्रत्येक काम प्रोफेशनल पद्धतीने, जबाबदारीने आणि क्लायंटच्या गरजांवर स्पष्ट लक्ष ठेवून हाताळले जाते.",
+vehicleEyebrow:"वाहन पार्किंग प्लॉट",vehicleTitle:"वाहन पार्किंग प्लॉट",vehicleDesc:"व्यवस्थित वाहन पार्किंगच्या गरजांसाठी समर्पित पार्किंग प्लॉट. उपलब्धता, लोकेशन आणि अधिक माहितीसाठी संपर्क करा.",vehicleCommitment:"वाहन पार्किंग सुविधा",vehicleCommitmentDesc:"सुरक्षित आणि व्यवस्थित वाहन पार्किंगसाठी समर्पित समाधान.",vehicleCheck1:"सोयीची वाहन पार्किंग",vehicleCheck2:"व्यवस्थित वाहन पार्किंग",vehicleCheck3:"पार्किंग समन्वय आणि स्टेटस अपडेट्स",vehicleCheck4:"रिकव्हरी संबंधित दस्तऐवजीकरण सहाय्य",vehicleCheck5:"प्रोफेशनल ग्राहक संवाद",vehicleCardTitle:"वाहन <span>पार्किंग प्लॉट</span>",vehicleCardDesc:"पार्किंग प्लॉटची माहिती आणि समन्वयासाठी Global Bank Recovery Agency शी संपर्क साधा.",vehicleCall:"आता कॉल करा",vehicleEmail:"ईमेल करा",
+documentsEyebrow:"कंपनी नोंदणी कागदपत्रे",documentsTitle:"कंपनी नोंदणी कागदपत्रे",documentsDesc:"कंपनीची अधिकृत प्रमाणपत्रे आणि नोंदणी कागदपत्रे.",doc1Title:"GUMASTA <span>Licence</span>",doc1Desc:"GUMASTA परवाना आणि संबंधित व्यवसाय नोंदणी दस्तऐवज.",doc2Title:"UDYAM <span>AADHAR</span>",doc2Desc:"उद्यम नोंदणी दस्तऐवज.",doc3Title:"ISO <span>Certificate</span>",doc3Desc:"ISO प्रमाणपत्र दस्तऐवज.",
+galleryEyebrow:"आमची गॅलरी",galleryTitle:"आमची गॅलरी",galleryDesc:"ऑफिस, सेवा आणि वाहन पार्किंग प्लॉटचे फोटो येथे जोडता येतील.",galleryOffice:"ऑफिस फोटो",galleryOfficeDesc:"ऑफिस आणि एजन्सीचे फोटो.",galleryParking:"वाहन पार्किंग प्लॉट",galleryParkingDesc:"वाहन पार्किंग प्लॉटचे फोटो.",galleryDocs:"कंपनी कागदपत्रे",galleryDocsDesc:"कंपनी प्रमाणपत्रांचे फोटो येथे दाखवता येतील.",
+ctaTitle:"प्रोफेशनल रिकव्हरी सहाय्य हवे आहे?",ctaDesc:"सेवा माहिती आणि समन्वयासाठी Global Bank Recovery Agency शी संपर्क साधा.",contactEyebrow:"संपर्क साधा",contactTitle:"Global Bank Recovery Agency शी संपर्क साधा",officeTitle:"कार्यालय",contactDetails:"संपर्क तपशील",footerDesc:"प्रोफेशनल, विश्वासार्ह आणि परिणामाभिमुख रिकव्हरी सोल्युशन्स.",quickLinks:"जलद लिंक",footerContact:"संपर्क",rights:"सर्व हक्क राखीव."
+},
+ta:{
+topTag:"தொழில்முறை • நம்பகமான • முடிவு நோக்கிய",subtitle:"தொழில்முறை | நம்பகமான | முடிவு நோக்கிய",
+navHome:"முகப்பு",navServices:"சேவைகள்",navVehicle:"வாகன பார்க்கிங் இடம்",navDocuments:"நிறுவன பதிவு ஆவணங்கள்",navGallery:"கேலரி",navAbout:"எங்களைப் பற்றி",navContact:"தொடர்பு கொள்ளுங்கள்",
+s1small:"தொழில்முறை வங்கி வசூல் சேவைகள்",s1title:"தொழில்முறை <span>வங்கி வசூல் சேவைகள்</span>",s1desc:"வங்கிகள் மற்றும் நிதி நிறுவனங்களுக்கு நம்பகமான மற்றும் முறையான வசூல் ஆதரவு.",
+s2small:"நம்பகமான வசூல் தீர்வுகள்",s2title:"நம்பகமான மற்றும் <span>தொழில்முறை தீர்வுகள்</span>",s2desc:"பொறுப்பான தொடர்பு, கள ஆதரவு மற்றும் பயனுள்ள வசூல் ஒருங்கிணைப்பு.",
+s3small:"ஆவண மற்றும் வசூல் ஆதரவு",s3title:"ஆவண மற்றும் <span>வசூல் ஆதரவு</span>",s3desc:"வசூல் தொடர்பான ஆவணங்கள் மற்றும் கள ஒருங்கிணைப்பிற்கான ஒழுங்கமைக்கப்பட்ட ஆதரவு.",
+s4small:"கார்ப்பரேட் மற்றும் நிறுவன சேவைகள்",s4title:"கார்ப்பரேட் மற்றும் <span>நிறுவன வசூல்</span>",s4desc:"வங்கிகள், நிதி நிறுவனங்கள் மற்றும் கார்ப்பரேட் தேவைகளுக்கான தொழில்முறை ஆதரவு.",
+s5small:"வாகன பார்க்கிங் இடம்",s5title:"வாகன <span>பார்க்கிங் இடம்</span>",s5desc:"ஒழுங்கமைக்கப்பட்ட பார்க்கிங் தேவைகளுக்கு ஏற்ற வசதியான வாகன நிறுத்துமிடம்.",
+s6small:"குளோபல் வங்கி வசூல் நிறுவனம்",s6title:"எங்கள் <span>குழுவைத் தொடர்பு கொள்ளுங்கள்</span>",s6desc:"தொழில்முறை வசூல் மற்றும் சேவை தொடர்பான தகவல்களுக்கு எங்கள் குழுவைத் தொடர்பு கொள்ளுங்கள்.",
+viewServices:"சேவைகளைப் பார்க்க →",learnMore:"மேலும் அறிய →",getStarted:"தொடங்குங்கள் →",viewParking:"பார்க்கிங் இடத்தைப் பார்க்க →",contactUs:"தொடர்பு கொள்ளுங்கள் →",callNow:"இப்போது அழைக்க",
+heroTitle:"உங்கள் வசூல்,<br><span>எங்கள் பொறுப்பு</span>",heroDesc:"வங்கிகள், நிதி நிறுவனங்கள் மற்றும் வணிகங்களுக்கு தொழில்முறை, நம்பகமான மற்றும் முடிவு நோக்கிய வசூல் தீர்வுகள்.",
+servicesEyebrow:"எங்கள் சேவைகள்",servicesTitle:"தொழில்முறை வசூல் சேவைகள்",servicesDesc:"தொழில்முறை அணுகுமுறையுடன் நம்பகமான வசூல் ஆதரவு.",
+card1Title:"வங்கி <span>வசூல் ஆதரவு</span>",card1Desc:"வங்கி மற்றும் நிதி வசூல் பணிகளுக்கான தொழில்முறை ஆதரவு.",card2Title:"கள வசூல் <span>உதவி</span>",card2Desc:"கள ஆதரவு, சரிபார்ப்பு, தடமறிதல் மற்றும் வசூல் ஒருங்கிணைப்பு.",card3Title:"தொலைபேசி அழைப்பு <span>ஆதரவு</span>",card3Desc:"வாடிக்கையாளர் தொடர்பு மற்றும் வசூல் பின்தொடர்விற்கான தொலைபேசி ஆதரவு.",card4Title:"வாடிக்கையாளர் தொடர்பு <span>மற்றும் ஒருங்கிணைப்பு</span>",card4Desc:"பொறுப்பான வாடிக்கையாளர் தொடர்பு மற்றும் பயனுள்ள ஒருங்கிணைப்பு.",card5Title:"ஆவண <span>ஆதரவு</span>",card5Desc:"ஒழுங்கமைக்கப்பட்ட வசூல் ஆவணங்கள், வழக்கு புதுப்பிப்புகள் மற்றும் அறிக்கையிடல்.",card6Title:"வசூல் <span>பின்தொடர்வு</span>",card6Desc:"வசூல் பணிகள் மற்றும் வாடிக்கையாளர் ஒருங்கிணைப்புக்கான கட்டமைக்கப்பட்ட பின்தொடர்வு.",card7Title:"கார்ப்பரேட் மற்றும் நிறுவன <span>ஆதரவு</span>",card7Desc:"நிறுவன மற்றும் கார்ப்பரேட் வசூல் தேவைகளுக்கான தொழில்முறை ஆதரவு.",
+aboutEyebrow:"எங்களைப் பற்றி",aboutTitle:"தொழில்முறை. நம்பகமான. பொறுப்பான.",aboutDesc:"Global Bank Recovery Agency பொறுப்பான செயல்பாடுகள், துல்லியமான அறிக்கையிடல் மற்றும் வாடிக்கையாளர் ஒருங்கிணைப்புடன் தொழில்முறை வசூல் மற்றும் கள ஆதரவை வழங்குகிறது.",check1:"தொழில்முறை கள செயல்பாடுகள்",check2:"வெளிப்படையான அறிக்கையிடல்",check3:"வாடிக்கையாளர் மைய ஒருங்கிணைப்பு",check4:"முடிவு நோக்கிய சேவை",missionTitle:"எங்கள் உறுதி",missionDesc:"ஒவ்வொரு பணியும் தொழில்முறை, பொறுப்பு மற்றும் வாடிக்கையாளர் தேவைகளில் தெளிவான கவனத்துடன் கையாளப்படுகிறது.",
+vehicleEyebrow:"வாகன பார்க்கிங் இடம்",vehicleTitle:"வாகன பார்க்கிங் இடம்",vehicleDesc:"ஒழுங்கமைக்கப்பட்ட வாகன நிறுத்த தேவைகளுக்கான பிரத்யேக பார்க்கிங் இடம். கிடைக்கும் தன்மை மற்றும் இருப்பிட விவரங்களுக்கு தொடர்பு கொள்ளுங்கள்.",vehicleCommitment:"வாகன நிறுத்த வசதி",vehicleCommitmentDesc:"பாதுகாப்பான மற்றும் ஒழுங்குபடுத்தப்பட்ட வாகன நிறுத்தத்திற்கான பிரத்யேக தீர்வு.",vehicleCheck1:"வசதியான வாகன நிறுத்தம்",vehicleCheck2:"ஒழுங்கமைக்கப்பட்ட வாகன நிறுத்தம்",vehicleCheck3:"பார்க்கிங் ஒருங்கிணைப்பு மற்றும் நிலை புதுப்பிப்புகள்",vehicleCheck4:"வசூல் தொடர்பான ஆவண உதவி",vehicleCheck5:"தொழில்முறை வாடிக்கையாளர் தொடர்பு",vehicleCardTitle:"வாகன <span>பார்க்கிங் இடம்</span>",vehicleCardDesc:"வாகன பார்க்கிங் இடம் தொடர்பான தகவல் மற்றும் ஒருங்கிணைப்புக்கு Global Bank Recovery Agency-ஐ தொடர்பு கொள்ளுங்கள்.",vehicleCall:"இப்போது அழைக்க",vehicleEmail:"மின்னஞ்சல்",
+documentsEyebrow:"நிறுவன பதிவு ஆவணங்கள்",documentsTitle:"நிறுவன பதிவு ஆவணங்கள்",documentsDesc:"நிறுவனத்தின் அதிகாரப்பூர்வ சான்றிதழ்கள் மற்றும் பதிவு ஆவணங்கள்.",doc1Title:"GUMASTA <span>Licence</span>",doc1Desc:"GUMASTA உரிமம் மற்றும் தொடர்புடைய வணிக பதிவு ஆவணம்.",doc2Title:"UDYAM <span>AADHAR</span>",doc2Desc:"உத்யம் பதிவு ஆவணம்.",doc3Title:"ISO <span>Certificate</span>",doc3Desc:"ISO சான்றிதழ் ஆவணம்.",
+galleryEyebrow:"எங்கள் கேலரி",galleryTitle:"எங்கள் கேலரி",galleryDesc:"அலுவலகம், சேவைகள் மற்றும் வாகன பார்க்கிங் இடத்தின் புகைப்படங்களை இங்கே சேர்க்கலாம்.",galleryOffice:"அலுவலக புகைப்படங்கள்",galleryOfficeDesc:"அலுவலகம் மற்றும் நிறுவன புகைப்படங்கள்.",galleryParking:"வாகன பார்க்கிங் இடம்",galleryParkingDesc:"வாகன பார்க்கிங் இட புகைப்படங்கள்.",galleryDocs:"நிறுவன ஆவணங்கள்",galleryDocsDesc:"நிறுவன சான்றிதழ் புகைப்படங்களை இங்கே காட்டலாம்.",
+ctaTitle:"தொழில்முறை வசூல் உதவி தேவையா?",ctaDesc:"சேவை தகவல் மற்றும் ஒருங்கிணைப்புக்கு Global Bank Recovery Agency-ஐ தொடர்பு கொள்ளுங்கள்.",contactEyebrow:"தொடர்பு கொள்ளுங்கள்",contactTitle:"Global Bank Recovery Agency-ஐ தொடர்பு கொள்ளுங்கள்",officeTitle:"அலுவலகம்",contactDetails:"தொடர்பு விவரங்கள்",footerDesc:"தொழில்முறை, நம்பகமான மற்றும் முடிவு நோக்கிய வசூல் தீர்வுகள்.",quickLinks:"விரைவு இணைப்புகள்",footerContact:"தொடர்பு",rights:"அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+},
+gu:{
+topTag:"વ્યાવસાયિક • વિશ્વસનીય • પરિણામલક્ષી",subtitle:"વ્યાવસાયિક | વિશ્વસનીય | પરિણામલક્ષી",
+navHome:"હોમ",navServices:"સેવાઓ",navVehicle:"વાહન પાર્કિંગ પ્લોટ",navDocuments:"કંપની નોંધણી દસ્તાવેજો",navGallery:"ગેલેરી",navAbout:"અમારા વિશે",navContact:"સંપર્ક કરો",
+s1small:"વ્યાવસાયિક બેંક રિકવરી સેવાઓ",s1title:"વ્યાવસાયિક <span>બેંક રિકવરી સેવાઓ</span>",s1desc:"બેંકો અને નાણાકીય સંસ્થાઓ માટે વિશ્વસનીય અને વ્યવસ્થિત રિકવરી સહાય.",
+s2small:"વિશ્વસનીય રિકવરી સોલ્યુશન્સ",s2title:"વિશ્વસનીય અને <span>વ્યાવસાયિક સોલ્યુશન્સ</span>",s2desc:"જવાબદાર સંવાદ, ફીલ્ડ સપોર્ટ અને અસરકારક રિકવરી સંકલન.",
+s3small:"દસ્તાવેજીકરણ અને રિકવરી સપોર્ટ",s3title:"દસ્તાવેજીકરણ અને <span>રિકવરી સપોર્ટ</span>",s3desc:"રિકવરી સંબંધિત દસ્તાવેજીકરણ અને ફીલ્ડ સંકલન માટે વ્યવસ્થિત સહાય.",
+s4small:"કોર્પોરેટ અને સંસ્થાકીય સેવાઓ",s4title:"કોર્પોરેટ અને <span>સંસ્થાકીય રિકવરી</span>",s4desc:"બેંકો, નાણાકીય સંસ્થાઓ અને કોર્પોરેટ જરૂરિયાતો માટે વ્યાવસાયિક સહાય.",
+s5small:"વાહન પાર્કિંગ પ્લોટ",s5title:"વાહન <span>પાર્કિંગ પ્લોટ</span>",s5desc:"વ્યવસ્થિત પાર્કિંગની જરૂરિયાતો માટે અનુકૂળ વાહન પાર્કિંગ જગ્યા.",
+s6small:"ગ્લોબલ બેંક રિકવરી એજન્સી",s6title:"અમારી <span>ટીમનો સંપર્ક કરો</span>",s6desc:"વ્યાવસાયિક રિકવરી અને સેવા સંબંધિત માહિતી માટે અમારી ટીમનો સંપર્ક કરો.",
+viewServices:"સેવાઓ જુઓ →",learnMore:"વધુ જાણો →",getStarted:"શરૂઆત કરો →",viewParking:"પાર્કિંગ પ્લોટ જુઓ →",contactUs:"સંપર્ક કરો →",callNow:"હમણાં કૉલ કરો",
+heroTitle:"તમારી રિકવરી,<br><span>અમારી જવાબદારી</span>",heroDesc:"બેંકો, નાણાકીય સંસ્થાઓ અને વ્યવસાયો માટે વ્યાવસાયિક, વિશ્વસનીય અને પરિણામલક્ષી રિકવરી સોલ્યુશન્સ.",
+servicesEyebrow:"અમારી સેવાઓ",servicesTitle:"વ્યાવસાયિક રિકવરી સેવાઓ",servicesDesc:"વ્યાવસાયિક અભિગમ સાથે વિશ્વસનીય રિકવરી સહાય.",
+card1Title:"બેંક <span>રિકવરી સપોર્ટ</span>",card1Desc:"બેંક અને નાણાકીય રિકવરી કામગીરી માટે વ્યાવસાયિક સહાય.",card2Title:"ફીલ્ડ રિકવરી <span>સહાય</span>",card2Desc:"ફીલ્ડ સપોર્ટ, ચકાસણી, ટ્રેસિંગ અને રિકવરી સંકલન.",card3Title:"ટેલી કોલિંગ <span>સપોર્ટ</span>",card3Desc:"ગ્રાહક સંવાદ અને રિકવરી ફોલો-અપ માટે ટેલી કોલિંગ સપોર્ટ.",card4Title:"ગ્રાહક સંવાદ <span>અને સંકલન</span>",card4Desc:"જવાબદાર ગ્રાહક સંવાદ અને અસરકારક સંકલન સહાય.",card5Title:"દસ્તાવેજીકરણ <span>સહાય</span>",card5Desc:"વ્યવસ્થિત રિકવરી દસ્તાવેજો, કેસ અપડેટ્સ અને રિપોર્ટિંગ સહાય.",card6Title:"રિકવરી <span>ફોલો-અપ</span>",card6Desc:"રિકવરી કામગીરી અને ક્લાયન્ટ સંકલન માટે સંરચિત ફોલો-અપ.",card7Title:"કોર્પોરેટ અને સંસ્થાકીય <span>સપોર્ટ</span>",card7Desc:"સંસ્થાકીય અને કોર્પોરેટ રિકવરી જરૂરિયાતો માટે વ્યાવસાયિક સહાય.",
+aboutEyebrow:"અમારા વિશે",aboutTitle:"વ્યાવસાયિક. વિશ્વસનીય. જવાબદાર.",aboutDesc:"Global Bank Recovery Agency જવાબદાર કામગીરી, સચોટ રિપોર્ટિંગ અને ક્લાયન્ટ સંકલન પર ભાર સાથે વ્યાવસાયિક રિકવરી સપોર્ટ અને ફીલ્ડ સંકલન સેવાઓ આપે છે.",check1:"વ્યાવસાયિક ફીલ્ડ કામગીરી",check2:"પારદર્શક રિપોર્ટિંગ",check3:"ક્લાયન્ટ કેન્દ્રિત સંકલન",check4:"પરિણામલક્ષી સેવા",missionTitle:"અમારી પ્રતિબદ્ધતા",missionDesc:"દરેક કાર્ય વ્યાવસાયિકતા, જવાબદારી અને ક્લાયન્ટની જરૂરિયાતો પર સ્પષ્ટ ધ્યાન સાથે સંભાળવામાં આવે છે.",
+vehicleEyebrow:"વાહન પાર્કિંગ પ્લોટ",vehicleTitle:"વાહન પાર્કિંગ પ્લોટ",vehicleDesc:"વ્યવસ્થિત વાહન પાર્કિંગની જરૂરિયાતો માટે સમર્પિત પાર્કિંગ પ્લોટ. ઉપલબ્ધતા, સ્થાન અને વધુ માહિતી માટે સંપર્ક કરો.",vehicleCommitment:"વાહન પાર્કિંગ સુવિધા",vehicleCommitmentDesc:"સુરક્ષિત અને વ્યવસ્થિત વાહન પાર્કિંગ માટે સમર્પિત ઉકેલ.",vehicleCheck1:"અનુકૂળ વાહન પાર્કિંગ",vehicleCheck2:"વ્યવસ્થિત વાહન પાર્કિંગ",vehicleCheck3:"પાર્કિંગ સંકલન અને સ્ટેટસ અપડેટ્સ",vehicleCheck4:"રિકવરી સંબંધિત દસ્તાવેજ સહાય",vehicleCheck5:"વ્યાવસાયિક ગ્રાહક સંવાદ",vehicleCardTitle:"વાહન <span>પાર્કિંગ પ્લોટ</span>",vehicleCardDesc:"પાર્કિંગ પ્લોટની માહિતી અને સંકલન માટે Global Bank Recovery Agency નો સંપર્ક કરો.",vehicleCall:"હમણાં કૉલ કરો",vehicleEmail:"ઈમેલ કરો",
+documentsEyebrow:"કંપની નોંધણી દસ્તાવેજો",documentsTitle:"કંપની નોંધણી દસ્તાવેજો",documentsDesc:"કંપનીના સત્તાવાર પ્રમાણપત્રો અને નોંધણી દસ્તાવેજો.",doc1Title:"GUMASTA <span>Licence</span>",doc1Desc:"GUMASTA લાઇસન્સ અને સંબંધિત વ્યવસાય નોંધણી દસ્તાવેજ.",doc2Title:"UDYAM <span>AADHAR</span>",doc2Desc:"ઉદ્યમ નોંધણી દસ્તાવેજ.",doc3Title:"ISO <span>Certificate</span>",doc3Desc:"ISO પ્રમાણપત્ર દસ્તાવેજ.",
+galleryEyebrow:"અમારી ગેલેરી",galleryTitle:"અમારી ગેલેરી",galleryDesc:"ઓફિસ, સેવાઓ અને વાહન પાર્કિંગ પ્લોટના ફોટા અહીં ઉમેરી શકાય છે.",galleryOffice:"ઓફિસ ફોટા",galleryOfficeDesc:"ઓફિસ અને એજન્સીના ફોટા.",galleryParking:"વાહન પાર્કિંગ પ્લોટ",galleryParkingDesc:"વાહન પાર્કિંગ પ્લોટના ફોટા.",galleryDocs:"કંપની દસ્તાવેજો",galleryDocsDesc:"કંપની પ્રમાણપત્રોના ફોટા અહીં બતાવી શકાય છે.",
+ctaTitle:"વ્યાવસાયિક રિકવરી સહાય જોઈએ?",ctaDesc:"સેવા માહિતી અને સંકલન માટે Global Bank Recovery Agency નો સંપર્ક કરો.",contactEyebrow:"સંપર્ક કરો",contactTitle:"Global Bank Recovery Agency નો સંપર્ક કરો",officeTitle:"ઓફિસ",contactDetails:"સંપર્ક વિગતો",footerDesc:"વ્યાવસાયિક, વિશ્વસનીય અને પરિણામલક્ષી રિકવરી સોલ્યુશન્સ.",quickLinks:"ઝડપી લિંક્સ",footerContact:"સંપર્ક",rights:"સર્વાધિકાર સુરક્ષિત."
+}
+};
+
+function applyLanguage(lang){
+  const t=translations[lang]||translations.en;
+  document.body.dataset.lang=lang;
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.dataset.i18n;
+    if(t[key]!==undefined) el.innerHTML=t[key];
+  });
+  localStorage.setItem("gbra-language",lang);
+  document.getElementById("languageSelect").value=lang;
+}
+document.getElementById("languageSelect").addEventListener("change",e=>applyLanguage(e.target.value));
+
+let currentSlide=0;
+const track=document.getElementById("sliderTrack");
+const slides=[...document.querySelectorAll(".slider-slide")];
+const dots=document.getElementById("sliderDots");
+
+slides.forEach((_,i)=>{
+  const b=document.createElement("button");
+  b.className="slider-dot"+(i===0?" active":"");
+  b.setAttribute("aria-label","Slide "+(i+1));
+  b.onclick=()=>goToSlide(i);
+  dots.appendChild(b);
+});
+function goToSlide(n){
+  currentSlide=(n+slides.length)%slides.length;
+  track.style.transform=`translateX(-${currentSlide*100}%)`;
+  [...dots.children].forEach((d,i)=>d.classList.toggle("active",i===currentSlide));
+}
+document.getElementById("prevSlide").onclick=()=>goToSlide(currentSlide-1);
+document.getElementById("nextSlide").onclick=()=>goToSlide(currentSlide+1);
+setInterval(()=>goToSlide(currentSlide+1),6000);
+
+document.getElementById("year").textContent=new Date().getFullYear();
+applyLanguage(localStorage.getItem("gbra-language")||"en");
+
+let touchStartX=0;
+document.getElementById("sliderTrack").addEventListener("touchstart",e=>{touchStartX=e.changedTouches[0].screenX;},{passive:true});
+document.getElementById("sliderTrack").addEventListener("touchend",e=>{
+  const dx=e.changedTouches[0].screenX-touchStartX;
+  if(Math.abs(dx)>45) goToSlide(currentSlide+(dx<0?1:-1));
+},{passive:true});
+</script>
+</body>
+</html>
